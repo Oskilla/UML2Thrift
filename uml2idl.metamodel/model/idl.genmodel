@@ -10,6 +10,15 @@
   <testsDirectory xsi:nil="true"/>
   <genPackages prefix="Idl" basePackage="uml2idl.metamodel" disposableProviderFactory="true"
       ecorePackage="idl.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="idl.ecore#//AcceptedType"/>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="idl.ecore#//NewEnum2"/>
+    <genDataTypes ecoreDataType="idl.ecore#//bool"/>
+    <genDataTypes ecoreDataType="idl.ecore#//byte"/>
+    <genDataTypes ecoreDataType="idl.ecore#//i16"/>
+    <genDataTypes ecoreDataType="idl.ecore#//int32"/>
+    <genDataTypes ecoreDataType="idl.ecore#//long"/>
+    <genDataTypes ecoreDataType="idl.ecore#//double"/>
+    <genDataTypes ecoreDataType="idl.ecore#//string"/>
     <genClasses ecoreClass="idl.ecore#//Service">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute idl.ecore#//Service/name"/>
     </genClasses>
@@ -18,12 +27,33 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute idl.ecore#//IDLModel/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference idl.ecore#//IDLModel/structure"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference idl.ecore#//IDLModel/containers"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference idl.ecore#//IDLModel/exceptions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference idl.ecore#//IDLModel/typedef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference idl.ecore#//IDLModel/const"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference idl.ecore#//IDLModel/enum"/>
     </genClasses>
     <genClasses ecoreClass="idl.ecore#//Structure">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute idl.ecore#//Structure/name"/>
     </genClasses>
     <genClasses ecoreClass="idl.ecore#//Containers">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute idl.ecore#//Containers/name"/>
+    </genClasses>
+    <genClasses ecoreClass="idl.ecore#//Exceptions">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute idl.ecore#//Exceptions/name"/>
+    </genClasses>
+    <genClasses ecoreClass="idl.ecore#//TypeDef">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute idl.ecore#//TypeDef/name"/>
+    </genClasses>
+    <genClasses ecoreClass="idl.ecore#//Const">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute idl.ecore#//Const/name"/>
+    </genClasses>
+    <genClasses ecoreClass="idl.ecore#//Enum">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute idl.ecore#//Enum/name"/>
+    </genClasses>
+    <genClasses ecoreClass="idl.ecore#//Field">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference idl.ecore#//Field/structure"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute idl.ecore#//Field/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute idl.ecore#//Field/id"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>
