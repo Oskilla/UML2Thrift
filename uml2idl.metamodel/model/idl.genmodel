@@ -55,5 +55,14 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute idl.ecore#//Field/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute idl.ecore#//Field/id"/>
     </genClasses>
+    <genClasses ecoreClass="idl.ecore#//list">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference idl.ecore#//list/containers"/>
+    </genClasses>
+    <genClasses ecoreClass="idl.ecore#//set">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference idl.ecore#//set/containers"/>
+    </genClasses>
+    <genClasses ecoreClass="idl.ecore#//map">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference idl.ecore#//map/containers"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>
