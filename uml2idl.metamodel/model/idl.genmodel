@@ -12,13 +12,24 @@
       ecorePackage="idl.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="idl.ecore#//AcceptedType"/>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="idl.ecore#//NewEnum2"/>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="idl.ecore#//AcceptedType.1">
+      <genEnumLiterals ecoreEnumLiteral="idl.ecore#//AcceptedType.1/bool"/>
+      <genEnumLiterals ecoreEnumLiteral="idl.ecore#//AcceptedType.1/byte"/>
+      <genEnumLiterals ecoreEnumLiteral="idl.ecore#//AcceptedType.1/i16"/>
+      <genEnumLiterals ecoreEnumLiteral="idl.ecore#//AcceptedType.1/i32"/>
+      <genEnumLiterals ecoreEnumLiteral="idl.ecore#//AcceptedType.1/long"/>
+      <genEnumLiterals ecoreEnumLiteral="idl.ecore#//AcceptedType.1/double"/>
+      <genEnumLiterals ecoreEnumLiteral="idl.ecore#//AcceptedType.1/byteArray"/>
+      <genEnumLiterals ecoreEnumLiteral="idl.ecore#//AcceptedType.1/string"/>
+    </genEnums>
     <genDataTypes ecoreDataType="idl.ecore#//bool"/>
     <genDataTypes ecoreDataType="idl.ecore#//byte"/>
     <genDataTypes ecoreDataType="idl.ecore#//i16"/>
-    <genDataTypes ecoreDataType="idl.ecore#//int32"/>
+    <genDataTypes ecoreDataType="idl.ecore#//i32"/>
     <genDataTypes ecoreDataType="idl.ecore#//long"/>
     <genDataTypes ecoreDataType="idl.ecore#//double"/>
     <genDataTypes ecoreDataType="idl.ecore#//string"/>
+    <genDataTypes ecoreDataType="idl.ecore#//byteArray"/>
     <genClasses ecoreClass="idl.ecore#//Service">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute idl.ecore#//Service/name"/>
     </genClasses>
@@ -28,9 +39,10 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference idl.ecore#//IDLModel/structure"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference idl.ecore#//IDLModel/containers"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference idl.ecore#//IDLModel/exceptions"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference idl.ecore#//IDLModel/typedef"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference idl.ecore#//IDLModel/const"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference idl.ecore#//IDLModel/enum"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference idl.ecore#//IDLModel/typedef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference idl.ecore#//IDLModel/union"/>
     </genClasses>
     <genClasses ecoreClass="idl.ecore#//Structure">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute idl.ecore#//Structure/name"/>
@@ -50,10 +62,8 @@
     <genClasses ecoreClass="idl.ecore#//Enum">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute idl.ecore#//Enum/name"/>
     </genClasses>
-    <genClasses ecoreClass="idl.ecore#//Field">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference idl.ecore#//Field/structure"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute idl.ecore#//Field/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute idl.ecore#//Field/id"/>
+    <genClasses ecoreClass="idl.ecore#//FieldStruct">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference idl.ecore#//FieldStruct/structure"/>
     </genClasses>
     <genClasses ecoreClass="idl.ecore#//list">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference idl.ecore#//list/containers"/>
@@ -63,6 +73,24 @@
     </genClasses>
     <genClasses ecoreClass="idl.ecore#//map">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference idl.ecore#//map/containers"/>
+    </genClasses>
+    <genClasses ecoreClass="idl.ecore#//FieldEnum">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference idl.ecore#//FieldEnum/enum"/>
+    </genClasses>
+    <genClasses ecoreClass="idl.ecore#//Union">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute idl.ecore#//Union/name"/>
+    </genClasses>
+    <genClasses ecoreClass="idl.ecore#//FieldUnion">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference idl.ecore#//FieldUnion/union"/>
+    </genClasses>
+    <genClasses ecoreClass="idl.ecore#//Field">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute idl.ecore#//Field/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute idl.ecore#//Field/id"/>
+    </genClasses>
+    <genClasses ecoreClass="idl.ecore#//Value">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference idl.ecore#//Value/fieldunion"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference idl.ecore#//Value/fieldstruct"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute idl.ecore#//Value/value"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

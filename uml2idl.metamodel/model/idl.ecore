@@ -14,12 +14,14 @@
         eType="#//Containers" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="exceptions" upperBound="-1"
         eType="#//Exceptions" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="typedef" upperBound="-1"
-        eType="#//TypeDef" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="const" upperBound="-1"
         eType="#//Const" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="enum" upperBound="-1" eType="#//Enum"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="typedef" upperBound="-1"
+        eType="#//TypeDef" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="union" upperBound="-1"
+        eType="#//Union" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Structure">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -30,7 +32,7 @@
   <eClassifiers xsi:type="ecore:EDataType" name="bool" instanceClassName="java.lang.Boolean"/>
   <eClassifiers xsi:type="ecore:EDataType" name="byte" instanceClassName="java.lang.Byte"/>
   <eClassifiers xsi:type="ecore:EDataType" name="i16" instanceClassName="java.lang.Short"/>
-  <eClassifiers xsi:type="ecore:EDataType" name="int32" instanceClassName="java.lang.Integer"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="i32" instanceClassName="java.lang.Integer"/>
   <eClassifiers xsi:type="ecore:EDataType" name="long" instanceClassName="java.lang.Long"/>
   <eClassifiers xsi:type="ecore:EDataType" name="double" instanceClassName="java.lang.Double"/>
   <eClassifiers xsi:type="ecore:EDataType" name="string" instanceClassName="java.lang.String"/>
@@ -48,11 +50,9 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="AcceptedType"/>
   <eClassifiers xsi:type="ecore:EEnum" name="NewEnum2"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Field">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="structure" upperBound="-1"
-        eType="#//Structure"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  <eClassifiers xsi:type="ecore:EClass" name="FieldStruct" eSuperTypes="#//Field">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="structure" lowerBound="1"
+        upperBound="-1" eType="#//Structure"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="list">
     <eStructuralFeatures xsi:type="ecore:EReference" name="containers" upperBound="-1"
@@ -65,5 +65,37 @@
   <eClassifiers xsi:type="ecore:EClass" name="map">
     <eStructuralFeatures xsi:type="ecore:EReference" name="containers" upperBound="-1"
         eType="#//Containers"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FieldEnum" eSuperTypes="#//Field">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="enum" upperBound="-1" eType="#//Enum"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Union">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FieldUnion" eSuperTypes="#//Field">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="union" upperBound="-1"
+        eType="#//Union"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="byteArray" instanceClassName="oracle.dss.util.xdo.common.io.ByteArray"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Field" abstract="true" interface="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="AcceptedType">
+    <eLiterals name="bool"/>
+    <eLiterals name="byte" value="1"/>
+    <eLiterals name="i16" value="2"/>
+    <eLiterals name="i32" value="3"/>
+    <eLiterals name="long" value="4"/>
+    <eLiterals name="double" value="5"/>
+    <eLiterals name="byteArray" value="6"/>
+    <eLiterals name="string" value="7"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Value" instanceTypeName="">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fieldunion" upperBound="-1"
+        eType="#//FieldUnion" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fieldstruct" upperBound="-1"
+        eType="#//FieldStruct" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="#//AcceptedType.1"/>
   </eClassifiers>
 </ecore:EPackage>
