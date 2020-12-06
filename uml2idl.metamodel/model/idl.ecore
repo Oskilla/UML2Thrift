@@ -68,86 +68,56 @@
   <eClassifiers xsi:type="ecore:EClass" name="Union">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="FieldUnionBool" eSuperTypes="#//Field">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="union" upperBound="-1"
-        eType="#//Union"/>
+  <eClassifiers xsi:type="ecore:EClass" name="FieldBool" eSuperTypes="#//Field">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="#//bool"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fieldunion" eType="#//FieldUnion"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fieldstruct" eType="#//FieldStruct"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EDataType" name="byteArray" instanceClassName="oracle.dss.util.xdo.common.io.ByteArray"/>
   <eClassifiers xsi:type="ecore:EClass" name="Field" abstract="true" interface="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="FieldUnionByte" eSuperTypes="#//Field">
+  <eClassifiers xsi:type="ecore:EClass" name="FieldByte" eSuperTypes="#//Field">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="#//byte"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="union" eType="#//Union"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fieldunion" eType="#//FieldUnion"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fieldstruct" eType="#//FieldStruct"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="FieldUnionByteArray" eSuperTypes="#//Field">
+  <eClassifiers xsi:type="ecore:EClass" name="FieldByteArray" eSuperTypes="#//Field">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="values" eType="#//byteArray"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="union" eType="#//Union"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fieldunion" eType="#//FieldUnion"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fieldstruct" eType="#//FieldStruct"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="FieldUnionDouble" eSuperTypes="#//Field">
+  <eClassifiers xsi:type="ecore:EClass" name="FieldDouble" eSuperTypes="#//Field">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="#//double"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="union" eType="#//Union"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fieldstruct" eType="#//FieldStruct"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fieldunion" eType="#//FieldUnion"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="FieldUnionI16" eSuperTypes="#//Field">
+  <eClassifiers xsi:type="ecore:EClass" name="FieldI16" eSuperTypes="#//Field">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="#//i16"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="union" eType="#//Union"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fieldstruct" eType="#//FieldStruct"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fieldunion" eType="#//FieldUnion"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="FieldUnionI32" eSuperTypes="#//Field">
+  <eClassifiers xsi:type="ecore:EClass" name="FieldI32" eSuperTypes="#//Field">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="#//i32"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="union" eType="#//Union"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fieldstruct" eType="#//FieldStruct"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fieldunion" eType="#//FieldUnion"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="FieldUnionLong" eSuperTypes="#//Field">
+  <eClassifiers xsi:type="ecore:EClass" name="FieldLong" eSuperTypes="#//Field">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="#//long"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="union" eType="#//Union"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fieldstruct" eType="#//FieldStruct"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fieldunion" eType="#//FieldUnion"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="FieldUnionString" eSuperTypes="#//Field">
+  <eClassifiers xsi:type="ecore:EClass" name="FieldString" eSuperTypes="#//Field">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="#//string"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="union" eType="#//Union"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fieldstruct" eType="#//FieldStruct"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fieldunion" eType="#//FieldUnion"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FieldStruct">
     <eStructuralFeatures xsi:type="ecore:EReference" name="structure" lowerBound="1"
         upperBound="-1" eType="#//Structure"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="FieldStructBool" eSuperTypes="#//Field">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="#//bool"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="fieldstruct" upperBound="-1"
-        eType="#//FieldStruct"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="FieldStructByte" eSuperTypes="#//Field">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="#//byte"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="fieldstruct" upperBound="-1"
-        eType="#//FieldStruct"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="FieldStructByteArray" eSuperTypes="#//Field">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="values" eType="#//byteArray"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="fieldstruct" upperBound="-1"
-        eType="#//FieldStruct"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="FieldStructDouble" eSuperTypes="#//Field">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="#//double"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="fieldstruct" upperBound="-1"
-        eType="#//FieldStruct"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="FieldStructI16" eSuperTypes="#//Field">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="#//i16"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="fieldstruct" upperBound="-1"
-        eType="#//FieldStruct"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="FieldStructI32" eSuperTypes="#//Field">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="#//i32"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="fieldstruct" upperBound="-1"
-        eType="#//FieldStruct"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="FieldStructLong" eSuperTypes="#//Field">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="#//long"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="fieldstruct" upperBound="-1"
-        eType="#//FieldStruct"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="FieldStructString" eSuperTypes="#//Field">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="#//string"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="fieldstruct" upperBound="-1"
-        eType="#//FieldStruct"/>
+  <eClassifiers xsi:type="ecore:EClass" name="FieldUnion">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="union" eType="#//Union"/>
   </eClassifiers>
 </ecore:EPackage>
