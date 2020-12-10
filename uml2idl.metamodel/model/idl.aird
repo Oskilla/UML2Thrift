@@ -5,7 +5,7 @@
     <semanticResources>idl.genmodel</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_GpMHEDL9EeuEXa1SVB0wiQ">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_Grt2oDL9EeuEXa1SVB0wiQ" name="idl" repPath="#_GqypkDL9EeuEXa1SVB0wiQ" changeId="dd9314d6-70c0-4bb9-9acd-904af70db5fd">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_Grt2oDL9EeuEXa1SVB0wiQ" name="idl" repPath="#_GqypkDL9EeuEXa1SVB0wiQ" changeId="a4a1983d-d254-4917-a2be-a20290f507dc">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="idl.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -413,7 +413,7 @@
         <styles xmi:type="notation:DiagramStyle" xmi:id="_GsGRIDL9EeuEXa1SVB0wiQ"/>
         <edges xmi:type="notation:Edge" xmi:id="_oW3ioDL9EeuEXa1SVB0wiQ" type="4001" element="_oWrVYDL9EeuEXa1SVB0wiQ" source="_oWyqIzL9EeuEXa1SVB0wiQ" target="_oWw08DL9EeuEXa1SVB0wiQ">
           <children xmi:type="notation:Node" xmi:id="_oW4wwDL9EeuEXa1SVB0wiQ" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oW4wwTL9EeuEXa1SVB0wiQ" x="-23" y="-46"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oW4wwTL9EeuEXa1SVB0wiQ" x="23" y="12"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_oW4wwjL9EeuEXa1SVB0wiQ" type="6002">
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oW4wwzL9EeuEXa1SVB0wiQ" x="9" y="6"/>
@@ -1098,7 +1098,7 @@
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_oWrVYDL9EeuEXa1SVB0wiQ" name="[0..1] services" sourceNode="_oWehEDL9EeuEXa1SVB0wiQ" targetNode="_oWaPoDL9EeuEXa1SVB0wiQ">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_oWrVYDL9EeuEXa1SVB0wiQ" name="[0..*] services" sourceNode="_oWehEDL9EeuEXa1SVB0wiQ" targetNode="_oWaPoDL9EeuEXa1SVB0wiQ">
       <target xmi:type="ecore:EReference" href="idl.ecore#//IDLModel/services"/>
       <semanticElements xmi:type="ecore:EReference" href="idl.ecore#//IDLModel/services"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_oWtxozL9EeuEXa1SVB0wiQ" description="_oWtxoDL9EeuEXa1SVB0wiQ" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
