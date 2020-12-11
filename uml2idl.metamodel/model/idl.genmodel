@@ -28,6 +28,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference idl.ecore#//IDLModel/services"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute idl.ecore#//IDLModel/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference idl.ecore#//IDLModel/structure"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference idl.ecore#//IDLModel/typedef"/>
     </genClasses>
     <genClasses ecoreClass="idl.ecore#//Structure">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute idl.ecore#//Structure/name"/>
@@ -84,6 +85,9 @@
     </genClasses>
     <genClasses ecoreClass="idl.ecore#//FieldFunction">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference idl.ecore#//FieldFunction/function"/>
+    </genClasses>
+    <genClasses ecoreClass="idl.ecore#//TypeDef">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute idl.ecore#//TypeDef/name"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>
