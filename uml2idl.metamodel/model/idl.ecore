@@ -17,6 +17,8 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Structure">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fieldstruct" lowerBound="1"
+        upperBound="-1" eType="#//FieldStruct"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EDataType" name="bool" instanceClassName="java.lang.Boolean"/>
   <eClassifiers xsi:type="ecore:EDataType" name="byte" instanceClassName="java.lang.Byte"/>
@@ -29,11 +31,11 @@
   <eClassifiers xsi:type="ecore:EEnum" name="NewEnum2"/>
   <eClassifiers xsi:type="ecore:EClass" name="Function">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fieldfunction" upperBound="-1"
+        eType="#//FieldFunction"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FieldBool" eSuperTypes="#//Field">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="#//bool"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="fieldfunction" eType="#//FieldFunction"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="fieldstruct" eType="#//FieldStruct"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EDataType" name="byteArray" instanceClassName="oracle.dss.util.xdo.common.io.ByteArray"/>
   <eClassifiers xsi:type="ecore:EClass" name="Field" abstract="true" interface="true">
@@ -42,46 +44,30 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FieldByte" eSuperTypes="#//Field">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="#//byte"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="fieldfunction" eType="#//FieldFunction"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="fieldstruct" eType="#//FieldStruct"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FieldByteArray" eSuperTypes="#//Field">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="values" eType="#//byteArray"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="fieldfunction" eType="#//FieldFunction"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="fieldstruct" eType="#//FieldStruct"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FieldDouble" eSuperTypes="#//Field">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="#//double"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="fieldstruct" eType="#//FieldStruct"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="fieldfunction" eType="#//FieldFunction"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FieldI16" eSuperTypes="#//Field">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="#//i16"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="fieldstruct" eType="#//FieldStruct"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="fifieldfunction" eType="#//FieldFunction"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FieldI32" eSuperTypes="#//Field">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="#//i32"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="fieldstruct" eType="#//FieldStruct"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="fifieldfunction" eType="#//FieldFunction"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FieldLong" eSuperTypes="#//Field">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="#//long"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="fieldstruct" eType="#//FieldStruct"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="fieldfunction" eType="#//FieldFunction"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FieldString" eSuperTypes="#//Field">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="#//string"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="fieldstruct" eType="#//FieldStruct"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="fieldfunction" eType="#//FieldFunction"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FieldStruct">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="structure" lowerBound="1"
-        upperBound="-1" eType="#//Structure"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="field" eType="#//Field"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FieldFunction">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="function" upperBound="-1"
-        eType="#//Function"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="field" eType="#//Field"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TypeDef">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
