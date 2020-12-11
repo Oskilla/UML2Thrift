@@ -5,12 +5,38 @@
 module uml2thrift;
 create OUT : IDL from IN : UML;
 
-rule interface2service {
+rule Model2IDLModel {
 	from
 		m1 : UML!Model
 	to
 		m2 : IDL!IDLModel (
-				name <- m1.name
+				name <- m1.name,
+				services <- m1.packagedElement
 			)
-		
 } 
+rule Interface2Service{
+	from
+		interface1 : UML!Interface
+	to
+		service2 : IDL!Service (
+				name <- interface1.name,
+				function <- interface1.ownedOperation
+			)
+}
+rule Operation2Function{
+	from
+		operation1 : UML!Operation
+	to
+		function2 : IDL!Function(
+				name <- operation1.name,
+				fieldfunction <- operation1.ownedParameter
+		)
+}
+rule Parameter2FieldFunction{
+	from
+		parameter1 : UML!Parameter
+	to
+		fieldfunction2 : IDL!FieldFunction(
+				name <- parameter1.name
+		)
+}

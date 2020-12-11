@@ -17,8 +17,8 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Structure">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="fieldstruct" lowerBound="1"
-        upperBound="-1" eType="#//FieldStruct"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fieldstruct" upperBound="-1"
+        eType="#//FieldStruct" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EDataType" name="bool" instanceClassName="java.lang.Boolean"/>
   <eClassifiers xsi:type="ecore:EDataType" name="byte" instanceClassName="java.lang.Byte"/>
@@ -32,7 +32,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="Function">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="fieldfunction" upperBound="-1"
-        eType="#//FieldFunction"/>
+        eType="#//FieldFunction" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FieldBool" eSuperTypes="#//Field">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="#//bool"/>

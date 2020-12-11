@@ -2,6 +2,7 @@
  */
 package uml2idl.metamodel.idl;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -15,6 +16,8 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link uml2idl.metamodel.idl.IDLModel#getServices <em>Services</em>}</li>
  *   <li>{@link uml2idl.metamodel.idl.IDLModel#getName <em>Name</em>}</li>
+ *   <li>{@link uml2idl.metamodel.idl.IDLModel#getStructure <em>Structure</em>}</li>
+ *   <li>{@link uml2idl.metamodel.idl.IDLModel#getTypedef <em>Typedef</em>}</li>
  * </ul>
  *
  * @see uml2idl.metamodel.idl.IdlPackage#getIDLModel()
@@ -23,26 +26,16 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface IDLModel extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Services</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Services</b></em>' containment reference list.
+	 * The list contents are of type {@link uml2idl.metamodel.idl.Service}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Services</em>' containment reference.
-	 * @see #setServices(Service)
+	 * @return the value of the '<em>Services</em>' containment reference list.
 	 * @see uml2idl.metamodel.idl.IdlPackage#getIDLModel_Services()
 	 * @model containment="true"
 	 * @generated
 	 */
-	Service getServices();
-
-	/**
-	 * Sets the value of the '{@link uml2idl.metamodel.idl.IDLModel#getServices <em>Services</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Services</em>' containment reference.
-	 * @see #getServices()
-	 * @generated
-	 */
-	void setServices(Service value);
+	EList<Service> getServices();
 
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
@@ -65,5 +58,29 @@ public interface IDLModel extends EObject {
 	 * @generated
 	 */
 	void setName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Structure</b></em>' containment reference list.
+	 * The list contents are of type {@link uml2idl.metamodel.idl.Structure}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Structure</em>' containment reference list.
+	 * @see uml2idl.metamodel.idl.IdlPackage#getIDLModel_Structure()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Structure> getStructure();
+
+	/**
+	 * Returns the value of the '<em><b>Typedef</b></em>' containment reference list.
+	 * The list contents are of type {@link uml2idl.metamodel.idl.TypeDef}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Typedef</em>' containment reference list.
+	 * @see uml2idl.metamodel.idl.IdlPackage#getIDLModel_Typedef()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<TypeDef> getTypedef();
 
 } // IDLModel

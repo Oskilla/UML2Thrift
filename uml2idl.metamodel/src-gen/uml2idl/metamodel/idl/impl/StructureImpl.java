@@ -15,25 +15,25 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-import uml2idl.metamodel.idl.Function;
+import uml2idl.metamodel.idl.FieldStruct;
 import uml2idl.metamodel.idl.IdlPackage;
-import uml2idl.metamodel.idl.Service;
+import uml2idl.metamodel.idl.Structure;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Service</b></em>'.
+ * An implementation of the model object '<em><b>Structure</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link uml2idl.metamodel.idl.impl.ServiceImpl#getName <em>Name</em>}</li>
- *   <li>{@link uml2idl.metamodel.idl.impl.ServiceImpl#getFunction <em>Function</em>}</li>
+ *   <li>{@link uml2idl.metamodel.idl.impl.StructureImpl#getName <em>Name</em>}</li>
+ *   <li>{@link uml2idl.metamodel.idl.impl.StructureImpl#getFieldstruct <em>Fieldstruct</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ServiceImpl extends MinimalEObjectImpl.Container implements Service {
+public class StructureImpl extends MinimalEObjectImpl.Container implements Structure {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -55,21 +55,21 @@ public class ServiceImpl extends MinimalEObjectImpl.Container implements Service
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getFunction() <em>Function</em>}' containment reference list.
+	 * The cached value of the '{@link #getFieldstruct() <em>Fieldstruct</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getFunction()
+	 * @see #getFieldstruct()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Function> function;
+	protected EList<FieldStruct> fieldstruct;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ServiceImpl() {
+	protected StructureImpl() {
 		super();
 	}
 
@@ -80,7 +80,7 @@ public class ServiceImpl extends MinimalEObjectImpl.Container implements Service
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return IdlPackage.Literals.SERVICE;
+		return IdlPackage.Literals.STRUCTURE;
 	}
 
 	/**
@@ -101,7 +101,7 @@ public class ServiceImpl extends MinimalEObjectImpl.Container implements Service
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, IdlPackage.SERVICE__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, IdlPackage.STRUCTURE__NAME, oldName, name));
 	}
 
 	/**
@@ -109,11 +109,12 @@ public class ServiceImpl extends MinimalEObjectImpl.Container implements Service
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Function> getFunction() {
-		if (function == null) {
-			function = new EObjectContainmentEList<Function>(Function.class, this, IdlPackage.SERVICE__FUNCTION);
+	public EList<FieldStruct> getFieldstruct() {
+		if (fieldstruct == null) {
+			fieldstruct = new EObjectContainmentEList<FieldStruct>(FieldStruct.class, this,
+					IdlPackage.STRUCTURE__FIELDSTRUCT);
 		}
-		return function;
+		return fieldstruct;
 	}
 
 	/**
@@ -124,8 +125,8 @@ public class ServiceImpl extends MinimalEObjectImpl.Container implements Service
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case IdlPackage.SERVICE__FUNCTION:
-			return ((InternalEList<?>) getFunction()).basicRemove(otherEnd, msgs);
+		case IdlPackage.STRUCTURE__FIELDSTRUCT:
+			return ((InternalEList<?>) getFieldstruct()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -138,10 +139,10 @@ public class ServiceImpl extends MinimalEObjectImpl.Container implements Service
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case IdlPackage.SERVICE__NAME:
+		case IdlPackage.STRUCTURE__NAME:
 			return getName();
-		case IdlPackage.SERVICE__FUNCTION:
-			return getFunction();
+		case IdlPackage.STRUCTURE__FIELDSTRUCT:
+			return getFieldstruct();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -155,12 +156,12 @@ public class ServiceImpl extends MinimalEObjectImpl.Container implements Service
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case IdlPackage.SERVICE__NAME:
+		case IdlPackage.STRUCTURE__NAME:
 			setName((String) newValue);
 			return;
-		case IdlPackage.SERVICE__FUNCTION:
-			getFunction().clear();
-			getFunction().addAll((Collection<? extends Function>) newValue);
+		case IdlPackage.STRUCTURE__FIELDSTRUCT:
+			getFieldstruct().clear();
+			getFieldstruct().addAll((Collection<? extends FieldStruct>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -174,11 +175,11 @@ public class ServiceImpl extends MinimalEObjectImpl.Container implements Service
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case IdlPackage.SERVICE__NAME:
+		case IdlPackage.STRUCTURE__NAME:
 			setName(NAME_EDEFAULT);
 			return;
-		case IdlPackage.SERVICE__FUNCTION:
-			getFunction().clear();
+		case IdlPackage.STRUCTURE__FIELDSTRUCT:
+			getFieldstruct().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -192,10 +193,10 @@ public class ServiceImpl extends MinimalEObjectImpl.Container implements Service
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case IdlPackage.SERVICE__NAME:
+		case IdlPackage.STRUCTURE__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-		case IdlPackage.SERVICE__FUNCTION:
-			return function != null && !function.isEmpty();
+		case IdlPackage.STRUCTURE__FIELDSTRUCT:
+			return fieldstruct != null && !fieldstruct.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -217,4 +218,4 @@ public class ServiceImpl extends MinimalEObjectImpl.Container implements Service
 		return result.toString();
 	}
 
-} //ServiceImpl
+} //StructureImpl
