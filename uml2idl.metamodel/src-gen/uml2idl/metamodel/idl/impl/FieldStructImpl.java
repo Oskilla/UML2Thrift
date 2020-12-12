@@ -21,6 +21,7 @@ import uml2idl.metamodel.idl.IdlPackage;
  * </p>
  * <ul>
  *   <li>{@link uml2idl.metamodel.idl.impl.FieldStructImpl#getField <em>Field</em>}</li>
+ *   <li>{@link uml2idl.metamodel.idl.impl.FieldStructImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
@@ -35,6 +36,25 @@ public class FieldStructImpl extends MinimalEObjectImpl.Container implements Fie
 	 * @ordered
 	 */
 	protected Field field;
+
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -99,6 +119,27 @@ public class FieldStructImpl extends MinimalEObjectImpl.Container implements Fie
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, IdlPackage.FIELD_STRUCT__NAME, oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -106,6 +147,8 @@ public class FieldStructImpl extends MinimalEObjectImpl.Container implements Fie
 			if (resolve)
 				return getField();
 			return basicGetField();
+		case IdlPackage.FIELD_STRUCT__NAME:
+			return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -122,6 +165,9 @@ public class FieldStructImpl extends MinimalEObjectImpl.Container implements Fie
 		case IdlPackage.FIELD_STRUCT__FIELD:
 			setField((Field) newValue);
 			return;
+		case IdlPackage.FIELD_STRUCT__NAME:
+			setName((String) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -137,6 +183,9 @@ public class FieldStructImpl extends MinimalEObjectImpl.Container implements Fie
 		case IdlPackage.FIELD_STRUCT__FIELD:
 			setField((Field) null);
 			return;
+		case IdlPackage.FIELD_STRUCT__NAME:
+			setName(NAME_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -151,8 +200,27 @@ public class FieldStructImpl extends MinimalEObjectImpl.Container implements Fie
 		switch (featureID) {
 		case IdlPackage.FIELD_STRUCT__FIELD:
 			return field != null;
+		case IdlPackage.FIELD_STRUCT__NAME:
+			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy())
+			return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (name: ");
+		result.append(name);
+		result.append(')');
+		return result.toString();
 	}
 
 } //FieldStructImpl

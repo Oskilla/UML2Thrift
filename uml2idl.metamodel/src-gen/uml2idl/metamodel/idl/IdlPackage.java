@@ -271,22 +271,13 @@ public interface IdlPackage extends EPackage {
 	int FIELD = 5;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FIELD__NAME = 0;
-
-	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FIELD__ID = 1;
+	int FIELD__ID = 0;
 
 	/**
 	 * The number of structural features of the '<em>Field</em>' class.
@@ -295,7 +286,7 @@ public interface IdlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FIELD_FEATURE_COUNT = 2;
+	int FIELD_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>Field</em>' class.
@@ -315,15 +306,6 @@ public interface IdlPackage extends EPackage {
 	 * @generated
 	 */
 	int FIELD_BOOL = 4;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FIELD_BOOL__NAME = FIELD__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -372,15 +354,6 @@ public interface IdlPackage extends EPackage {
 	int FIELD_BYTE = 6;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FIELD_BYTE__NAME = FIELD__NAME;
-
-	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -425,15 +398,6 @@ public interface IdlPackage extends EPackage {
 	 * @generated
 	 */
 	int FIELD_BYTE_ARRAY = 7;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FIELD_BYTE_ARRAY__NAME = FIELD__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -482,15 +446,6 @@ public interface IdlPackage extends EPackage {
 	int FIELD_DOUBLE = 8;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FIELD_DOUBLE__NAME = FIELD__NAME;
-
-	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -535,15 +490,6 @@ public interface IdlPackage extends EPackage {
 	 * @generated
 	 */
 	int FIELD_I16 = 9;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FIELD_I16__NAME = FIELD__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -592,15 +538,6 @@ public interface IdlPackage extends EPackage {
 	int FIELD_I32 = 10;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FIELD_I32__NAME = FIELD__NAME;
-
-	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -647,15 +584,6 @@ public interface IdlPackage extends EPackage {
 	int FIELD_LONG = 11;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FIELD_LONG__NAME = FIELD__NAME;
-
-	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -700,15 +628,6 @@ public interface IdlPackage extends EPackage {
 	 * @generated
 	 */
 	int FIELD_STRING = 12;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FIELD_STRING__NAME = FIELD__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -766,13 +685,22 @@ public interface IdlPackage extends EPackage {
 	int FIELD_STRUCT__FIELD = 0;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FIELD_STRUCT__NAME = 1;
+
+	/**
 	 * The number of structural features of the '<em>Field Struct</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FIELD_STRUCT_FEATURE_COUNT = 1;
+	int FIELD_STRUCT_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Field Struct</em>' class.
@@ -803,13 +731,22 @@ public interface IdlPackage extends EPackage {
 	int FIELD_FUNCTION__FIELD = 0;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FIELD_FUNCTION__NAME = 1;
+
+	/**
 	 * The number of structural features of the '<em>Field Function</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FIELD_FUNCTION_FEATURE_COUNT = 1;
+	int FIELD_FUNCTION_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Field Function</em>' class.
@@ -1139,17 +1076,6 @@ public interface IdlPackage extends EPackage {
 	EClass getField();
 
 	/**
-	 * Returns the meta object for the attribute '{@link uml2idl.metamodel.idl.Field#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see uml2idl.metamodel.idl.Field#getName()
-	 * @see #getField()
-	 * @generated
-	 */
-	EAttribute getField_Name();
-
-	/**
 	 * Returns the meta object for the attribute '{@link uml2idl.metamodel.idl.Field#getId <em>Id</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1329,6 +1255,17 @@ public interface IdlPackage extends EPackage {
 	EReference getFieldStruct_Field();
 
 	/**
+	 * Returns the meta object for the attribute '{@link uml2idl.metamodel.idl.FieldStruct#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see uml2idl.metamodel.idl.FieldStruct#getName()
+	 * @see #getFieldStruct()
+	 * @generated
+	 */
+	EAttribute getFieldStruct_Name();
+
+	/**
 	 * Returns the meta object for class '{@link uml2idl.metamodel.idl.FieldFunction <em>Field Function</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1348,6 +1285,17 @@ public interface IdlPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getFieldFunction_Field();
+
+	/**
+	 * Returns the meta object for the attribute '{@link uml2idl.metamodel.idl.FieldFunction#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see uml2idl.metamodel.idl.FieldFunction#getName()
+	 * @see #getFieldFunction()
+	 * @generated
+	 */
+	EAttribute getFieldFunction_Name();
 
 	/**
 	 * Returns the meta object for class '{@link uml2idl.metamodel.idl.TypeDef <em>Type Def</em>}'.
@@ -1650,14 +1598,6 @@ public interface IdlPackage extends EPackage {
 		EClass FIELD = eINSTANCE.getField();
 
 		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute FIELD__NAME = eINSTANCE.getField_Name();
-
-		/**
 		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1810,6 +1750,14 @@ public interface IdlPackage extends EPackage {
 		EReference FIELD_STRUCT__FIELD = eINSTANCE.getFieldStruct_Field();
 
 		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FIELD_STRUCT__NAME = eINSTANCE.getFieldStruct_Name();
+
+		/**
 		 * The meta object literal for the '{@link uml2idl.metamodel.idl.impl.FieldFunctionImpl <em>Field Function</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1826,6 +1774,14 @@ public interface IdlPackage extends EPackage {
 		 * @generated
 		 */
 		EReference FIELD_FUNCTION__FIELD = eINSTANCE.getFieldFunction_Field();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FIELD_FUNCTION__NAME = eINSTANCE.getFieldFunction_Name();
 
 		/**
 		 * The meta object literal for the '{@link uml2idl.metamodel.idl.impl.TypeDefImpl <em>Type Def</em>}' class.

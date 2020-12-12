@@ -444,17 +444,8 @@ public class IdlPackageImpl extends EPackageImpl implements IdlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getField_Name() {
-		return (EAttribute) fieldEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getField_Id() {
-		return (EAttribute) fieldEClass.getEStructuralFeatures().get(1);
+		return (EAttribute) fieldEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -606,6 +597,15 @@ public class IdlPackageImpl extends EPackageImpl implements IdlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getFieldStruct_Name() {
+		return (EAttribute) fieldStructEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getFieldFunction() {
 		return fieldFunctionEClass;
 	}
@@ -617,6 +617,15 @@ public class IdlPackageImpl extends EPackageImpl implements IdlPackage {
 	 */
 	public EReference getFieldFunction_Field() {
 		return (EReference) fieldFunctionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getFieldFunction_Name() {
+		return (EAttribute) fieldFunctionEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -778,7 +787,6 @@ public class IdlPackageImpl extends EPackageImpl implements IdlPackage {
 		createEAttribute(fieldBoolEClass, FIELD_BOOL__VALUE);
 
 		fieldEClass = createEClass(FIELD);
-		createEAttribute(fieldEClass, FIELD__NAME);
 		createEAttribute(fieldEClass, FIELD__ID);
 
 		fieldByteEClass = createEClass(FIELD_BYTE);
@@ -804,9 +812,11 @@ public class IdlPackageImpl extends EPackageImpl implements IdlPackage {
 
 		fieldStructEClass = createEClass(FIELD_STRUCT);
 		createEReference(fieldStructEClass, FIELD_STRUCT__FIELD);
+		createEAttribute(fieldStructEClass, FIELD_STRUCT__NAME);
 
 		fieldFunctionEClass = createEClass(FIELD_FUNCTION);
 		createEReference(fieldFunctionEClass, FIELD_FUNCTION__FIELD);
+		createEAttribute(fieldFunctionEClass, FIELD_FUNCTION__NAME);
 
 		typeDefEClass = createEClass(TYPE_DEF);
 		createEAttribute(typeDefEClass, TYPE_DEF__NAME);
@@ -908,8 +918,6 @@ public class IdlPackageImpl extends EPackageImpl implements IdlPackage {
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(fieldEClass, Field.class, "Field", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getField_Name(), ecorePackage.getEString(), "name", null, 0, 1, Field.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getField_Id(), ecorePackage.getEInt(), "id", null, 0, 1, Field.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -953,12 +961,16 @@ public class IdlPackageImpl extends EPackageImpl implements IdlPackage {
 		initEReference(getFieldStruct_Field(), this.getField(), null, "field", null, 0, 1, FieldStruct.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFieldStruct_Name(), ecorePackage.getEString(), "name", null, 0, 1, FieldStruct.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(fieldFunctionEClass, FieldFunction.class, "FieldFunction", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getFieldFunction_Field(), this.getField(), null, "field", null, 0, 1, FieldFunction.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFieldFunction_Name(), ecorePackage.getEString(), "name", null, 0, 1, FieldFunction.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(typeDefEClass, TypeDef.class, "TypeDef", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTypeDef_Name(), ecorePackage.getEString(), "name", null, 0, 1, TypeDef.class, !IS_TRANSIENT,

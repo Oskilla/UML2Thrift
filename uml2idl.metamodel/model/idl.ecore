@@ -39,7 +39,6 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EDataType" name="byteArray" instanceClassName="oracle.dss.util.xdo.common.io.ByteArray"/>
   <eClassifiers xsi:type="ecore:EClass" name="Field" abstract="true" interface="true">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FieldByte" eSuperTypes="#//Field">
@@ -65,9 +64,11 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FieldStruct">
     <eStructuralFeatures xsi:type="ecore:EReference" name="field" eType="#//Field"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FieldFunction">
     <eStructuralFeatures xsi:type="ecore:EReference" name="field" eType="#//Field"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TypeDef">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

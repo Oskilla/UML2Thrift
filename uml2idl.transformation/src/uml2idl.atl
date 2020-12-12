@@ -11,7 +11,8 @@ rule Model2IDLModel {
 	to
 		m2 : IDL!IDLModel (
 				name <- m1.name,
-				services <- m1.packagedElement
+				services <- m1.packagedElement,
+				structure <- m1.packagedElement
 			)
 } 
 rule Interface2Service{
@@ -37,6 +38,18 @@ rule Parameter2FieldFunction{
 		parameter1 : UML!Parameter
 	to
 		fieldfunction2 : IDL!FieldFunction(
-				name <- parameter1.name
+				name <- parameter1.name,
+				field <- parameter1.type
 		)
 }
+rule DataType2Structure{
+	from
+		datatype1 : UML!DataType
+	to
+		fieldstruct2 : IDL!Structure(
+			name <- datatype1.name
+		)
+}
+
+
+
