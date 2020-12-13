@@ -133,13 +133,13 @@ public interface IdlPackage extends EPackage {
 	int IDL_MODEL__NAME = 1;
 
 	/**
-	 * The feature id for the '<em><b>Structure</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Structures</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IDL_MODEL__STRUCTURE = 2;
+	int IDL_MODEL__STRUCTURES = 2;
 
 	/**
 	 * The feature id for the '<em><b>Typedef</b></em>' containment reference list.
@@ -179,22 +179,22 @@ public interface IdlPackage extends EPackage {
 	int STRUCTURE = 2;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STRUCTURE__NAME = 0;
-
-	/**
 	 * The feature id for the '<em><b>Fieldstruct</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STRUCTURE__FIELDSTRUCT = 1;
+	int STRUCTURE__FIELDSTRUCT = 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRUCTURE__NAME = 1;
 
 	/**
 	 * The number of structural features of the '<em>Structure</em>' class.
@@ -959,15 +959,15 @@ public interface IdlPackage extends EPackage {
 	EAttribute getIDLModel_Name();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link uml2idl.metamodel.idl.IDLModel#getStructure <em>Structure</em>}'.
+	 * Returns the meta object for the containment reference list '{@link uml2idl.metamodel.idl.IDLModel#getStructures <em>Structures</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Structure</em>'.
-	 * @see uml2idl.metamodel.idl.IDLModel#getStructure()
+	 * @return the meta object for the containment reference list '<em>Structures</em>'.
+	 * @see uml2idl.metamodel.idl.IDLModel#getStructures()
 	 * @see #getIDLModel()
 	 * @generated
 	 */
-	EReference getIDLModel_Structure();
+	EReference getIDLModel_Structures();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link uml2idl.metamodel.idl.IDLModel#getTypedef <em>Typedef</em>}'.
@@ -1502,12 +1502,12 @@ public interface IdlPackage extends EPackage {
 		EAttribute IDL_MODEL__NAME = eINSTANCE.getIDLModel_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Structure</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Structures</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference IDL_MODEL__STRUCTURE = eINSTANCE.getIDLModel_Structure();
+		EReference IDL_MODEL__STRUCTURES = eINSTANCE.getIDLModel_Structures();
 
 		/**
 		 * The meta object literal for the '<em><b>Typedef</b></em>' containment reference list feature.

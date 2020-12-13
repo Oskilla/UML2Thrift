@@ -38,7 +38,7 @@
     </mapAttribute>
     <mapAttribute key="Path">
         <mapEntry key="IDL" value="/uml2idl.metamodel/model/idl.ecore"/>
-        <mapEntry key="IN" value="/uml2idl.testing/models/input/uml/cache/cache-datatypes.uml"/>
+        <mapEntry key="IN" value="/uml2idl.testing/models/input/uml/E.uml"/>
         <mapEntry key="OUT" value="/uml2idl.testing/models/input/uml/testout.idl"/>
         <mapEntry key="UML" value="uri:http://www.eclipse.org/uml2/5.0.0/UML"/>
     </mapAttribute>

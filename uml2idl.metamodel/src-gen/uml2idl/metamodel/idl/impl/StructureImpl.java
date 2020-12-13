@@ -27,13 +27,23 @@ import uml2idl.metamodel.idl.Structure;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link uml2idl.metamodel.idl.impl.StructureImpl#getName <em>Name</em>}</li>
  *   <li>{@link uml2idl.metamodel.idl.impl.StructureImpl#getFieldstruct <em>Fieldstruct</em>}</li>
+ *   <li>{@link uml2idl.metamodel.idl.impl.StructureImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class StructureImpl extends MinimalEObjectImpl.Container implements Structure {
+	/**
+	 * The cached value of the '{@link #getFieldstruct() <em>Fieldstruct</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFieldstruct()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<FieldStruct> fieldstruct;
+
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -53,16 +63,6 @@ public class StructureImpl extends MinimalEObjectImpl.Container implements Struc
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getFieldstruct() <em>Fieldstruct</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getFieldstruct()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<FieldStruct> fieldstruct;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -139,10 +139,10 @@ public class StructureImpl extends MinimalEObjectImpl.Container implements Struc
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case IdlPackage.STRUCTURE__NAME:
-			return getName();
 		case IdlPackage.STRUCTURE__FIELDSTRUCT:
 			return getFieldstruct();
+		case IdlPackage.STRUCTURE__NAME:
+			return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -156,12 +156,12 @@ public class StructureImpl extends MinimalEObjectImpl.Container implements Struc
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case IdlPackage.STRUCTURE__NAME:
-			setName((String) newValue);
-			return;
 		case IdlPackage.STRUCTURE__FIELDSTRUCT:
 			getFieldstruct().clear();
 			getFieldstruct().addAll((Collection<? extends FieldStruct>) newValue);
+			return;
+		case IdlPackage.STRUCTURE__NAME:
+			setName((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -175,11 +175,11 @@ public class StructureImpl extends MinimalEObjectImpl.Container implements Struc
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case IdlPackage.STRUCTURE__NAME:
-			setName(NAME_EDEFAULT);
-			return;
 		case IdlPackage.STRUCTURE__FIELDSTRUCT:
 			getFieldstruct().clear();
+			return;
+		case IdlPackage.STRUCTURE__NAME:
+			setName(NAME_EDEFAULT);
 			return;
 		}
 		super.eUnset(featureID);
@@ -193,10 +193,10 @@ public class StructureImpl extends MinimalEObjectImpl.Container implements Struc
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case IdlPackage.STRUCTURE__NAME:
-			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		case IdlPackage.STRUCTURE__FIELDSTRUCT:
 			return fieldstruct != null && !fieldstruct.isEmpty();
+		case IdlPackage.STRUCTURE__NAME:
+			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
 	}

@@ -11,8 +11,22 @@ rule Model2IDLModel {
 	to
 		m2 : IDL!IDLModel (
 				name <- m1.name,
-				services <- m1.packagedElement,
-				structure <- m1.packagedElement
+				services <- m1.packagedElement->iterate(element ; interfaces : OrderedSet(UML!Interface) =
+					OrderedSet{} |
+					if element.oclIsTypeOf(UML!Interface) then
+							interfaces.append(element)
+					else
+							interfaces
+					endif	
+				),
+				services <- m1.packagedElement->iterate(element ; datatypes : OrderedSet(UML!DataType) =
+					OrderedSet{} |
+					if element.oclIsTypeOf(UML!DataType) then
+							datatypes.append(element)
+					else
+							datatypes
+					endif	
+				)
 			)
 } 
 rule Interface2Service{
@@ -44,12 +58,10 @@ rule Parameter2FieldFunction{
 }
 rule DataType2Structure{
 	from
-		datatype1 : UML!DataType
+		interface1 : UML!DataType
 	to
-		fieldstruct2 : IDL!Structure(
-			name <- datatype1.name
-		)
+		service2 : IDL!Structure (
+				name <- interface1.name
+			)
 }
-
-
 

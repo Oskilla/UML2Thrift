@@ -31,7 +31,7 @@ import uml2idl.metamodel.idl.TypeDef;
  * <ul>
  *   <li>{@link uml2idl.metamodel.idl.impl.IDLModelImpl#getServices <em>Services</em>}</li>
  *   <li>{@link uml2idl.metamodel.idl.impl.IDLModelImpl#getName <em>Name</em>}</li>
- *   <li>{@link uml2idl.metamodel.idl.impl.IDLModelImpl#getStructure <em>Structure</em>}</li>
+ *   <li>{@link uml2idl.metamodel.idl.impl.IDLModelImpl#getStructures <em>Structures</em>}</li>
  *   <li>{@link uml2idl.metamodel.idl.impl.IDLModelImpl#getTypedef <em>Typedef</em>}</li>
  * </ul>
  *
@@ -69,14 +69,14 @@ public class IDLModelImpl extends MinimalEObjectImpl.Container implements IDLMod
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getStructure() <em>Structure</em>}' containment reference list.
+	 * The cached value of the '{@link #getStructures() <em>Structures</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getStructure()
+	 * @see #getStructures()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Structure> structure;
+	protected EList<Structure> structures;
 
 	/**
 	 * The cached value of the '{@link #getTypedef() <em>Typedef</em>}' containment reference list.
@@ -145,11 +145,12 @@ public class IDLModelImpl extends MinimalEObjectImpl.Container implements IDLMod
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Structure> getStructure() {
-		if (structure == null) {
-			structure = new EObjectContainmentEList<Structure>(Structure.class, this, IdlPackage.IDL_MODEL__STRUCTURE);
+	public EList<Structure> getStructures() {
+		if (structures == null) {
+			structures = new EObjectContainmentEList<Structure>(Structure.class, this,
+					IdlPackage.IDL_MODEL__STRUCTURES);
 		}
-		return structure;
+		return structures;
 	}
 
 	/**
@@ -174,8 +175,8 @@ public class IDLModelImpl extends MinimalEObjectImpl.Container implements IDLMod
 		switch (featureID) {
 		case IdlPackage.IDL_MODEL__SERVICES:
 			return ((InternalEList<?>) getServices()).basicRemove(otherEnd, msgs);
-		case IdlPackage.IDL_MODEL__STRUCTURE:
-			return ((InternalEList<?>) getStructure()).basicRemove(otherEnd, msgs);
+		case IdlPackage.IDL_MODEL__STRUCTURES:
+			return ((InternalEList<?>) getStructures()).basicRemove(otherEnd, msgs);
 		case IdlPackage.IDL_MODEL__TYPEDEF:
 			return ((InternalEList<?>) getTypedef()).basicRemove(otherEnd, msgs);
 		}
@@ -194,8 +195,8 @@ public class IDLModelImpl extends MinimalEObjectImpl.Container implements IDLMod
 			return getServices();
 		case IdlPackage.IDL_MODEL__NAME:
 			return getName();
-		case IdlPackage.IDL_MODEL__STRUCTURE:
-			return getStructure();
+		case IdlPackage.IDL_MODEL__STRUCTURES:
+			return getStructures();
 		case IdlPackage.IDL_MODEL__TYPEDEF:
 			return getTypedef();
 		}
@@ -218,9 +219,9 @@ public class IDLModelImpl extends MinimalEObjectImpl.Container implements IDLMod
 		case IdlPackage.IDL_MODEL__NAME:
 			setName((String) newValue);
 			return;
-		case IdlPackage.IDL_MODEL__STRUCTURE:
-			getStructure().clear();
-			getStructure().addAll((Collection<? extends Structure>) newValue);
+		case IdlPackage.IDL_MODEL__STRUCTURES:
+			getStructures().clear();
+			getStructures().addAll((Collection<? extends Structure>) newValue);
 			return;
 		case IdlPackage.IDL_MODEL__TYPEDEF:
 			getTypedef().clear();
@@ -244,8 +245,8 @@ public class IDLModelImpl extends MinimalEObjectImpl.Container implements IDLMod
 		case IdlPackage.IDL_MODEL__NAME:
 			setName(NAME_EDEFAULT);
 			return;
-		case IdlPackage.IDL_MODEL__STRUCTURE:
-			getStructure().clear();
+		case IdlPackage.IDL_MODEL__STRUCTURES:
+			getStructures().clear();
 			return;
 		case IdlPackage.IDL_MODEL__TYPEDEF:
 			getTypedef().clear();
@@ -266,8 +267,8 @@ public class IDLModelImpl extends MinimalEObjectImpl.Container implements IDLMod
 			return services != null && !services.isEmpty();
 		case IdlPackage.IDL_MODEL__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-		case IdlPackage.IDL_MODEL__STRUCTURE:
-			return structure != null && !structure.isEmpty();
+		case IdlPackage.IDL_MODEL__STRUCTURES:
+			return structures != null && !structures.isEmpty();
 		case IdlPackage.IDL_MODEL__TYPEDEF:
 			return typedef != null && !typedef.isEmpty();
 		}

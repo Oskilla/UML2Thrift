@@ -345,7 +345,7 @@ public class IdlPackageImpl extends EPackageImpl implements IdlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getIDLModel_Structure() {
+	public EReference getIDLModel_Structures() {
 		return (EReference) idlModelEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -373,7 +373,7 @@ public class IdlPackageImpl extends EPackageImpl implements IdlPackage {
 	 * @generated
 	 */
 	public EAttribute getStructure_Name() {
-		return (EAttribute) structureEClass.getEStructuralFeatures().get(0);
+		return (EAttribute) structureEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -382,7 +382,7 @@ public class IdlPackageImpl extends EPackageImpl implements IdlPackage {
 	 * @generated
 	 */
 	public EReference getStructure_Fieldstruct() {
-		return (EReference) structureEClass.getEStructuralFeatures().get(1);
+		return (EReference) structureEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -772,12 +772,12 @@ public class IdlPackageImpl extends EPackageImpl implements IdlPackage {
 		idlModelEClass = createEClass(IDL_MODEL);
 		createEReference(idlModelEClass, IDL_MODEL__SERVICES);
 		createEAttribute(idlModelEClass, IDL_MODEL__NAME);
-		createEReference(idlModelEClass, IDL_MODEL__STRUCTURE);
+		createEReference(idlModelEClass, IDL_MODEL__STRUCTURES);
 		createEReference(idlModelEClass, IDL_MODEL__TYPEDEF);
 
 		structureEClass = createEClass(STRUCTURE);
-		createEAttribute(structureEClass, STRUCTURE__NAME);
 		createEReference(structureEClass, STRUCTURE__FIELDSTRUCT);
+		createEAttribute(structureEClass, STRUCTURE__NAME);
 
 		functionEClass = createEClass(FUNCTION);
 		createEAttribute(functionEClass, FUNCTION__NAME);
@@ -889,7 +889,7 @@ public class IdlPackageImpl extends EPackageImpl implements IdlPackage {
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getIDLModel_Name(), ecorePackage.getEString(), "name", null, 0, 1, IDLModel.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getIDLModel_Structure(), this.getStructure(), null, "structure", null, 0, -1, IDLModel.class,
+		initEReference(getIDLModel_Structures(), this.getStructure(), null, "structures", null, 0, -1, IDLModel.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getIDLModel_Typedef(), this.getTypeDef(), null, "typedef", null, 0, -1, IDLModel.class,
@@ -898,11 +898,11 @@ public class IdlPackageImpl extends EPackageImpl implements IdlPackage {
 
 		initEClass(structureEClass, Structure.class, "Structure", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getStructure_Name(), ecorePackage.getEString(), "name", null, 0, 1, Structure.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getStructure_Fieldstruct(), this.getFieldStruct(), null, "fieldstruct", null, 0, -1,
 				Structure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getStructure_Name(), ecorePackage.getEString(), "name", null, 0, 1, Structure.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(functionEClass, Function.class, "Function", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);

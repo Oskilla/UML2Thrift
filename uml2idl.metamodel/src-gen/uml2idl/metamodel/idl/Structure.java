@@ -14,8 +14,8 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link uml2idl.metamodel.idl.Structure#getName <em>Name</em>}</li>
  *   <li>{@link uml2idl.metamodel.idl.Structure#getFieldstruct <em>Fieldstruct</em>}</li>
+ *   <li>{@link uml2idl.metamodel.idl.Structure#getName <em>Name</em>}</li>
  * </ul>
  *
  * @see uml2idl.metamodel.idl.IdlPackage#getStructure()
