@@ -63,30 +63,12 @@ public class IdlFactoryImpl extends EFactoryImpl implements IdlFactory {
 			return createIDLModel();
 		case IdlPackage.STRUCTURE:
 			return createStructure();
+		case IdlPackage.FIELD:
+			return createField();
 		case IdlPackage.FUNCTION:
 			return createFunction();
-		case IdlPackage.FIELD_BOOL:
-			return createFieldBool();
-		case IdlPackage.FIELD_BYTE:
-			return createFieldByte();
-		case IdlPackage.FIELD_BYTE_ARRAY:
-			return createFieldByteArray();
-		case IdlPackage.FIELD_DOUBLE:
-			return createFieldDouble();
-		case IdlPackage.FIELD_I16:
-			return createFieldI16();
-		case IdlPackage.FIELD_I32:
-			return createFieldI32();
-		case IdlPackage.FIELD_LONG:
-			return createFieldLong();
-		case IdlPackage.FIELD_STRING:
-			return createFieldString();
-		case IdlPackage.FIELD_STRUCT:
-			return createFieldStruct();
-		case IdlPackage.FIELD_FUNCTION:
-			return createFieldFunction();
-		case IdlPackage.TYPE_DEF:
-			return createTypeDef();
+		case IdlPackage.TYPE:
+			return createType();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -193,6 +175,16 @@ public class IdlFactoryImpl extends EFactoryImpl implements IdlFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Field createField() {
+		FieldImpl field = new FieldImpl();
+		return field;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Function createFunction() {
 		FunctionImpl function = new FunctionImpl();
 		return function;
@@ -203,109 +195,9 @@ public class IdlFactoryImpl extends EFactoryImpl implements IdlFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public FieldBool createFieldBool() {
-		FieldBoolImpl fieldBool = new FieldBoolImpl();
-		return fieldBool;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public FieldByte createFieldByte() {
-		FieldByteImpl fieldByte = new FieldByteImpl();
-		return fieldByte;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public FieldByteArray createFieldByteArray() {
-		FieldByteArrayImpl fieldByteArray = new FieldByteArrayImpl();
-		return fieldByteArray;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public FieldDouble createFieldDouble() {
-		FieldDoubleImpl fieldDouble = new FieldDoubleImpl();
-		return fieldDouble;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public FieldI16 createFieldI16() {
-		FieldI16Impl fieldI16 = new FieldI16Impl();
-		return fieldI16;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public FieldI32 createFieldI32() {
-		FieldI32Impl fieldI32 = new FieldI32Impl();
-		return fieldI32;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public FieldLong createFieldLong() {
-		FieldLongImpl fieldLong = new FieldLongImpl();
-		return fieldLong;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public FieldString createFieldString() {
-		FieldStringImpl fieldString = new FieldStringImpl();
-		return fieldString;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public FieldStruct createFieldStruct() {
-		FieldStructImpl fieldStruct = new FieldStructImpl();
-		return fieldStruct;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public FieldFunction createFieldFunction() {
-		FieldFunctionImpl fieldFunction = new FieldFunctionImpl();
-		return fieldFunction;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public TypeDef createTypeDef() {
-		TypeDefImpl typeDef = new TypeDefImpl();
-		return typeDef;
+	public Type createType() {
+		TypeImpl type = new TypeImpl();
+		return type;
 	}
 
 	/**

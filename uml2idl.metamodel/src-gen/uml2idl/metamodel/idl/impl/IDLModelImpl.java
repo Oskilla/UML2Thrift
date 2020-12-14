@@ -19,7 +19,6 @@ import uml2idl.metamodel.idl.IDLModel;
 import uml2idl.metamodel.idl.IdlPackage;
 import uml2idl.metamodel.idl.Service;
 import uml2idl.metamodel.idl.Structure;
-import uml2idl.metamodel.idl.TypeDef;
 
 /**
  * <!-- begin-user-doc -->
@@ -32,7 +31,6 @@ import uml2idl.metamodel.idl.TypeDef;
  *   <li>{@link uml2idl.metamodel.idl.impl.IDLModelImpl#getServices <em>Services</em>}</li>
  *   <li>{@link uml2idl.metamodel.idl.impl.IDLModelImpl#getName <em>Name</em>}</li>
  *   <li>{@link uml2idl.metamodel.idl.impl.IDLModelImpl#getStructures <em>Structures</em>}</li>
- *   <li>{@link uml2idl.metamodel.idl.impl.IDLModelImpl#getTypedef <em>Typedef</em>}</li>
  * </ul>
  *
  * @generated
@@ -77,16 +75,6 @@ public class IDLModelImpl extends MinimalEObjectImpl.Container implements IDLMod
 	 * @ordered
 	 */
 	protected EList<Structure> structures;
-
-	/**
-	 * The cached value of the '{@link #getTypedef() <em>Typedef</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTypedef()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<TypeDef> typedef;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -158,18 +146,6 @@ public class IDLModelImpl extends MinimalEObjectImpl.Container implements IDLMod
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<TypeDef> getTypedef() {
-		if (typedef == null) {
-			typedef = new EObjectContainmentEList<TypeDef>(TypeDef.class, this, IdlPackage.IDL_MODEL__TYPEDEF);
-		}
-		return typedef;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -177,8 +153,6 @@ public class IDLModelImpl extends MinimalEObjectImpl.Container implements IDLMod
 			return ((InternalEList<?>) getServices()).basicRemove(otherEnd, msgs);
 		case IdlPackage.IDL_MODEL__STRUCTURES:
 			return ((InternalEList<?>) getStructures()).basicRemove(otherEnd, msgs);
-		case IdlPackage.IDL_MODEL__TYPEDEF:
-			return ((InternalEList<?>) getTypedef()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -197,8 +171,6 @@ public class IDLModelImpl extends MinimalEObjectImpl.Container implements IDLMod
 			return getName();
 		case IdlPackage.IDL_MODEL__STRUCTURES:
 			return getStructures();
-		case IdlPackage.IDL_MODEL__TYPEDEF:
-			return getTypedef();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -223,10 +195,6 @@ public class IDLModelImpl extends MinimalEObjectImpl.Container implements IDLMod
 			getStructures().clear();
 			getStructures().addAll((Collection<? extends Structure>) newValue);
 			return;
-		case IdlPackage.IDL_MODEL__TYPEDEF:
-			getTypedef().clear();
-			getTypedef().addAll((Collection<? extends TypeDef>) newValue);
-			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -248,9 +216,6 @@ public class IDLModelImpl extends MinimalEObjectImpl.Container implements IDLMod
 		case IdlPackage.IDL_MODEL__STRUCTURES:
 			getStructures().clear();
 			return;
-		case IdlPackage.IDL_MODEL__TYPEDEF:
-			getTypedef().clear();
-			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -269,8 +234,6 @@ public class IDLModelImpl extends MinimalEObjectImpl.Container implements IDLMod
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		case IdlPackage.IDL_MODEL__STRUCTURES:
 			return structures != null && !structures.isEmpty();
-		case IdlPackage.IDL_MODEL__TYPEDEF:
-			return typedef != null && !typedef.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

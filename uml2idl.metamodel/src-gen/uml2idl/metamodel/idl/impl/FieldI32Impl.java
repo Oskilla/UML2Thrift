@@ -5,8 +5,9 @@ package uml2idl.metamodel.idl.impl;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 import uml2idl.metamodel.idl.FieldI32;
 import uml2idl.metamodel.idl.IdlPackage;
 
@@ -18,33 +19,12 @@ import uml2idl.metamodel.idl.IdlPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link uml2idl.metamodel.idl.impl.FieldI32Impl#getId <em>Id</em>}</li>
  *   <li>{@link uml2idl.metamodel.idl.impl.FieldI32Impl#getValue <em>Value</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class FieldI32Impl extends MinimalEObjectImpl.Container implements FieldI32 {
-	/**
-	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getId()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final int ID_EDEFAULT = 0;
-
-	/**
-	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getId()
-	 * @generated
-	 * @ordered
-	 */
-	protected int id = ID_EDEFAULT;
-
+public class FieldI32Impl extends BoundedFieldImpl implements FieldI32 {
 	/**
 	 * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -89,27 +69,6 @@ public class FieldI32Impl extends MinimalEObjectImpl.Container implements FieldI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getId() {
-		return id;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setId(int newId) {
-		int oldId = id;
-		id = newId;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, IdlPackage.FIELD_I32__ID, oldId, id));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public Integer getValue() {
 		return value;
 	}
@@ -134,8 +93,6 @@ public class FieldI32Impl extends MinimalEObjectImpl.Container implements FieldI
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case IdlPackage.FIELD_I32__ID:
-			return getId();
 		case IdlPackage.FIELD_I32__VALUE:
 			return getValue();
 		}
@@ -150,9 +107,6 @@ public class FieldI32Impl extends MinimalEObjectImpl.Container implements FieldI
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case IdlPackage.FIELD_I32__ID:
-			setId((Integer) newValue);
-			return;
 		case IdlPackage.FIELD_I32__VALUE:
 			setValue((Integer) newValue);
 			return;
@@ -168,9 +122,6 @@ public class FieldI32Impl extends MinimalEObjectImpl.Container implements FieldI
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case IdlPackage.FIELD_I32__ID:
-			setId(ID_EDEFAULT);
-			return;
 		case IdlPackage.FIELD_I32__VALUE:
 			setValue(VALUE_EDEFAULT);
 			return;
@@ -186,8 +137,6 @@ public class FieldI32Impl extends MinimalEObjectImpl.Container implements FieldI
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case IdlPackage.FIELD_I32__ID:
-			return id != ID_EDEFAULT;
 		case IdlPackage.FIELD_I32__VALUE:
 			return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
 		}
@@ -205,9 +154,7 @@ public class FieldI32Impl extends MinimalEObjectImpl.Container implements FieldI
 			return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (id: ");
-		result.append(id);
-		result.append(", value: ");
+		result.append(" (value: ");
 		result.append(value);
 		result.append(')');
 		return result.toString();

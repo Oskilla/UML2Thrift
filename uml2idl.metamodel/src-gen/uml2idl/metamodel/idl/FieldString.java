@@ -2,6 +2,8 @@
  */
 package uml2idl.metamodel.idl;
 
+import org.eclipse.emf.ecore.EObject;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Field String</b></em>'.
@@ -18,7 +20,7 @@ package uml2idl.metamodel.idl;
  * @model
  * @generated
  */
-public interface FieldString extends Field {
+public interface FieldString extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->

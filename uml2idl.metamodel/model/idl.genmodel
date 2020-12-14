@@ -30,47 +30,19 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference idl.ecore#//IDLModel/structures"/>
     </genClasses>
     <genClasses ecoreClass="idl.ecore#//Structure">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference idl.ecore#//Structure/fieldstruct"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute idl.ecore#//Structure/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference idl.ecore#//Structure/field"/>
+    </genClasses>
+    <genClasses ecoreClass="idl.ecore#//Field">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute idl.ecore#//Field/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference idl.ecore#//Field/type"/>
     </genClasses>
     <genClasses ecoreClass="idl.ecore#//Function">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute idl.ecore#//Function/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference idl.ecore#//Function/fieldfunction"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference idl.ecore#//Function/field"/>
     </genClasses>
-    <genClasses ecoreClass="idl.ecore#//FieldBool">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute idl.ecore#//FieldBool/value"/>
-    </genClasses>
-    <genClasses ecoreClass="idl.ecore#//Field">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute idl.ecore#//Field/id"/>
-    </genClasses>
-    <genClasses ecoreClass="idl.ecore#//FieldByte">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute idl.ecore#//FieldByte/value"/>
-    </genClasses>
-    <genClasses ecoreClass="idl.ecore#//FieldByteArray">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute idl.ecore#//FieldByteArray/values"/>
-    </genClasses>
-    <genClasses ecoreClass="idl.ecore#//FieldDouble">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute idl.ecore#//FieldDouble/value"/>
-    </genClasses>
-    <genClasses ecoreClass="idl.ecore#//FieldI16">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute idl.ecore#//FieldI16/value"/>
-    </genClasses>
-    <genClasses ecoreClass="idl.ecore#//FieldI32">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute idl.ecore#//FieldI32/value"/>
-    </genClasses>
-    <genClasses ecoreClass="idl.ecore#//FieldLong">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute idl.ecore#//FieldLong/value"/>
-    </genClasses>
-    <genClasses ecoreClass="idl.ecore#//FieldString">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute idl.ecore#//FieldString/value"/>
-    </genClasses>
-    <genClasses ecoreClass="idl.ecore#//FieldStruct">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference idl.ecore#//FieldStruct/field"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute idl.ecore#//FieldStruct/name"/>
-    </genClasses>
-    <genClasses ecoreClass="idl.ecore#//FieldFunction">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference idl.ecore#//FieldFunction/field"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute idl.ecore#//FieldFunction/name"/>
+    <genClasses ecoreClass="idl.ecore#//Type">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute idl.ecore#//Type/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference idl.ecore#//Type/eType"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

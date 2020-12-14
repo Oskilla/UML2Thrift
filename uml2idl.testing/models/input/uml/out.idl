@@ -2,18 +2,30 @@
 <idl:IDLModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:idl="idl" name="CacheDatatypes">
   <services name="Cache">
     <function name="storeARecord">
-      <fieldfunction name="host"/>
-      <fieldfunction name="address"/>
-      <fieldfunction name="ttl"/>
+      <field name="host">
+        <type name="HostName"/>
+      </field>
+      <field name="address">
+        <type name="IPAddress"/>
+      </field>
+      <field name="ttl">
+        <type name="TimeToLive"/>
+      </field>
     </function>
   </services>
   <structures name="IPAddress">
-    <fieldstruct name="values"/>
+    <field name="values">
+      <type name="Integer"/>
+    </field>
   </structures>
   <structures name="HostName">
-    <fieldstruct name="names"/>
+    <field name="names">
+      <type name="String"/>
+    </field>
   </structures>
   <structures name="TimeToLive">
-    <fieldstruct name="value"/>
+    <field name="value">
+      <type name="Real"/>
+    </field>
   </structures>
 </idl:IDLModel>

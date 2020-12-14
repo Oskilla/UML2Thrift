@@ -18,7 +18,7 @@ package uml2idl.metamodel.idl;
  * @model
  * @generated
  */
-public interface FieldDouble extends Field {
+public interface FieldDouble extends BoundedField {
 	/**
 	 * Returns the value of the '<em><b>Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->

@@ -82,68 +82,18 @@ public class IdlAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseFunction(Function object) {
-			return createFunctionAdapter();
-		}
-
-		@Override
-		public Adapter caseFieldBool(FieldBool object) {
-			return createFieldBoolAdapter();
-		}
-
-		@Override
 		public Adapter caseField(Field object) {
 			return createFieldAdapter();
 		}
 
 		@Override
-		public Adapter caseFieldByte(FieldByte object) {
-			return createFieldByteAdapter();
+		public Adapter caseFunction(Function object) {
+			return createFunctionAdapter();
 		}
 
 		@Override
-		public Adapter caseFieldByteArray(FieldByteArray object) {
-			return createFieldByteArrayAdapter();
-		}
-
-		@Override
-		public Adapter caseFieldDouble(FieldDouble object) {
-			return createFieldDoubleAdapter();
-		}
-
-		@Override
-		public Adapter caseFieldI16(FieldI16 object) {
-			return createFieldI16Adapter();
-		}
-
-		@Override
-		public Adapter caseFieldI32(FieldI32 object) {
-			return createFieldI32Adapter();
-		}
-
-		@Override
-		public Adapter caseFieldLong(FieldLong object) {
-			return createFieldLongAdapter();
-		}
-
-		@Override
-		public Adapter caseFieldString(FieldString object) {
-			return createFieldStringAdapter();
-		}
-
-		@Override
-		public Adapter caseFieldStruct(FieldStruct object) {
-			return createFieldStructAdapter();
-		}
-
-		@Override
-		public Adapter caseFieldFunction(FieldFunction object) {
-			return createFieldFunctionAdapter();
-		}
-
-		@Override
-		public Adapter caseTypeDef(TypeDef object) {
-			return createTypeDefAdapter();
+		public Adapter caseType(Type object) {
+			return createTypeAdapter();
 		}
 
 		@Override
@@ -222,16 +172,16 @@ public class IdlAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link uml2idl.metamodel.idl.FieldBool <em>Field Bool</em>}'.
+	 * Creates a new adapter for an object of class '{@link uml2idl.metamodel.idl.Type <em>Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see uml2idl.metamodel.idl.FieldBool
+	 * @see uml2idl.metamodel.idl.Type
 	 * @generated
 	 */
-	public Adapter createFieldBoolAdapter() {
+	public Adapter createTypeAdapter() {
 		return null;
 	}
 
@@ -246,146 +196,6 @@ public class IdlAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createFieldAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link uml2idl.metamodel.idl.FieldByte <em>Field Byte</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see uml2idl.metamodel.idl.FieldByte
-	 * @generated
-	 */
-	public Adapter createFieldByteAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link uml2idl.metamodel.idl.FieldByteArray <em>Field Byte Array</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see uml2idl.metamodel.idl.FieldByteArray
-	 * @generated
-	 */
-	public Adapter createFieldByteArrayAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link uml2idl.metamodel.idl.FieldDouble <em>Field Double</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see uml2idl.metamodel.idl.FieldDouble
-	 * @generated
-	 */
-	public Adapter createFieldDoubleAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link uml2idl.metamodel.idl.FieldI16 <em>Field I16</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see uml2idl.metamodel.idl.FieldI16
-	 * @generated
-	 */
-	public Adapter createFieldI16Adapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link uml2idl.metamodel.idl.FieldI32 <em>Field I32</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see uml2idl.metamodel.idl.FieldI32
-	 * @generated
-	 */
-	public Adapter createFieldI32Adapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link uml2idl.metamodel.idl.FieldLong <em>Field Long</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see uml2idl.metamodel.idl.FieldLong
-	 * @generated
-	 */
-	public Adapter createFieldLongAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link uml2idl.metamodel.idl.FieldString <em>Field String</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see uml2idl.metamodel.idl.FieldString
-	 * @generated
-	 */
-	public Adapter createFieldStringAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link uml2idl.metamodel.idl.FieldStruct <em>Field Struct</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see uml2idl.metamodel.idl.FieldStruct
-	 * @generated
-	 */
-	public Adapter createFieldStructAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link uml2idl.metamodel.idl.FieldFunction <em>Field Function</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see uml2idl.metamodel.idl.FieldFunction
-	 * @generated
-	 */
-	public Adapter createFieldFunctionAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link uml2idl.metamodel.idl.TypeDef <em>Type Def</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see uml2idl.metamodel.idl.TypeDef
-	 * @generated
-	 */
-	public Adapter createTypeDefAdapter() {
 		return null;
 	}
 

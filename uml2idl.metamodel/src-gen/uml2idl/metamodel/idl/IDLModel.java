@@ -17,7 +17,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link uml2idl.metamodel.idl.IDLModel#getServices <em>Services</em>}</li>
  *   <li>{@link uml2idl.metamodel.idl.IDLModel#getName <em>Name</em>}</li>
  *   <li>{@link uml2idl.metamodel.idl.IDLModel#getStructures <em>Structures</em>}</li>
- *   <li>{@link uml2idl.metamodel.idl.IDLModel#getTypedef <em>Typedef</em>}</li>
  * </ul>
  *
  * @see uml2idl.metamodel.idl.IdlPackage#getIDLModel()
@@ -70,17 +69,5 @@ public interface IDLModel extends EObject {
 	 * @generated
 	 */
 	EList<Structure> getStructures();
-
-	/**
-	 * Returns the value of the '<em><b>Typedef</b></em>' containment reference list.
-	 * The list contents are of type {@link uml2idl.metamodel.idl.TypeDef}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Typedef</em>' containment reference list.
-	 * @see uml2idl.metamodel.idl.IdlPackage#getIDLModel_Typedef()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<TypeDef> getTypedef();
 
 } // IDLModel

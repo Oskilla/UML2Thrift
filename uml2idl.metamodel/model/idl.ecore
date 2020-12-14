@@ -13,10 +13,9 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="structures" upperBound="-1"
         eType="#//Structure" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Structure" eSuperTypes="#//Field">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="fieldstruct" upperBound="-1"
-        eType="#//FieldStruct" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Structure" eSuperTypes="#//Type">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="field" upperBound="-1"
+        eType="#//Field" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EDataType" name="bool" instanceClassName="java.lang.Boolean"/>
   <eClassifiers xsi:type="ecore:EDataType" name="byte" instanceClassName="java.lang.Byte"/>
@@ -27,45 +26,20 @@
   <eClassifiers xsi:type="ecore:EDataType" name="string" instanceClassName="java.lang.String"/>
   <eClassifiers xsi:type="ecore:EEnum" name="AcceptedType"/>
   <eClassifiers xsi:type="ecore:EEnum" name="NewEnum2"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="byteArray" instanceClassName="oracle.dss.util.xdo.common.io.ByteArray"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Field">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" upperBound="-1" eType="#//Type"
+        containment="true"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Function">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="fieldfunction" upperBound="-1"
-        eType="#//FieldFunction" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="field" upperBound="-1"
+        eType="#//Field" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="FieldBool" eSuperTypes="#//Field">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="#//bool"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EDataType" name="byteArray" instanceClassName="oracle.dss.util.xdo.common.io.ByteArray"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Field" abstract="true" interface="true">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="FieldByte" eSuperTypes="#//Field">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="#//byte"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="FieldByteArray" eSuperTypes="#//Field">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="values" eType="#//byteArray"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="FieldDouble" eSuperTypes="#//Field">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="#//double"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="FieldI16" eSuperTypes="#//Field">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="#//i16"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="FieldI32" eSuperTypes="#//Field">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="#//i32"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="FieldLong" eSuperTypes="#//Field">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="#//long"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="FieldString" eSuperTypes="#//Field">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="#//string"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="FieldStruct">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="field" eType="#//Field"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Type">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="FieldFunction">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="field" eType="#//Field"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="eType" eType="#//Type"
+        containment="true"/>
   </eClassifiers>
 </ecore:EPackage>

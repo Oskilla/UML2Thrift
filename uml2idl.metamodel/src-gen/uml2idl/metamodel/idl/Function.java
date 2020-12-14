@@ -3,6 +3,7 @@
 package uml2idl.metamodel.idl;
 
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -15,7 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link uml2idl.metamodel.idl.Function#getName <em>Name</em>}</li>
- *   <li>{@link uml2idl.metamodel.idl.Function#getFieldfunction <em>Fieldfunction</em>}</li>
+ *   <li>{@link uml2idl.metamodel.idl.Function#getField <em>Field</em>}</li>
  * </ul>
  *
  * @see uml2idl.metamodel.idl.IdlPackage#getFunction()
@@ -46,15 +47,15 @@ public interface Function extends EObject {
 	void setName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Fieldfunction</b></em>' containment reference list.
-	 * The list contents are of type {@link uml2idl.metamodel.idl.FieldFunction}.
+	 * Returns the value of the '<em><b>Field</b></em>' containment reference list.
+	 * The list contents are of type {@link uml2idl.metamodel.idl.Field}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Fieldfunction</em>' containment reference list.
-	 * @see uml2idl.metamodel.idl.IdlPackage#getFunction_Fieldfunction()
+	 * @return the value of the '<em>Field</em>' containment reference list.
+	 * @see uml2idl.metamodel.idl.IdlPackage#getFunction_Field()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<FieldFunction> getFieldfunction();
+	EList<Field> getField();
 
 } // Function

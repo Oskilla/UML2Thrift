@@ -142,22 +142,13 @@ public interface IdlPackage extends EPackage {
 	int IDL_MODEL__STRUCTURES = 2;
 
 	/**
-	 * The feature id for the '<em><b>Typedef</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IDL_MODEL__TYPEDEF = 3;
-
-	/**
 	 * The number of structural features of the '<em>IDL Model</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IDL_MODEL_FEATURE_COUNT = 4;
+	int IDL_MODEL_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>IDL Model</em>' class.
@@ -179,13 +170,34 @@ public interface IdlPackage extends EPackage {
 	int STRUCTURE = 2;
 
 	/**
-	 * The feature id for the '<em><b>Fieldstruct</b></em>' containment reference list.
+	 * The meta object id for the '{@link uml2idl.metamodel.idl.impl.FunctionImpl <em>Function</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @see uml2idl.metamodel.idl.impl.FunctionImpl
+	 * @see uml2idl.metamodel.idl.impl.IdlPackageImpl#getFunction()
 	 * @generated
-	 * @ordered
 	 */
-	int STRUCTURE__FIELDSTRUCT = 0;
+	int FUNCTION = 4;
+
+	/**
+	 * The meta object id for the '{@link uml2idl.metamodel.idl.impl.FieldImpl <em>Field</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see uml2idl.metamodel.idl.impl.FieldImpl
+	 * @see uml2idl.metamodel.idl.impl.IdlPackageImpl#getField()
+	 * @generated
+	 */
+	int FIELD = 3;
+
+	/**
+	 * The meta object id for the '{@link uml2idl.metamodel.idl.impl.TypeImpl <em>Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see uml2idl.metamodel.idl.impl.TypeImpl
+	 * @see uml2idl.metamodel.idl.impl.IdlPackageImpl#getType()
+	 * @generated
+	 */
+	int TYPE = 5;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -194,7 +206,61 @@ public interface IdlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STRUCTURE__NAME = 1;
+	int TYPE__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>EType</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPE__ETYPE = 1;
+
+	/**
+	 * The number of structural features of the '<em>Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPE_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Type</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TYPE_OPERATION_COUNT = 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRUCTURE__NAME = TYPE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>EType</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRUCTURE__ETYPE = TYPE__ETYPE;
+
+	/**
+	 * The feature id for the '<em><b>Field</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRUCTURE__FIELD = TYPE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Structure</em>' class.
@@ -203,7 +269,7 @@ public interface IdlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STRUCTURE_FEATURE_COUNT = 2;
+	int STRUCTURE_FEATURE_COUNT = TYPE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Structure</em>' class.
@@ -212,17 +278,43 @@ public interface IdlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STRUCTURE_OPERATION_COUNT = 0;
+	int STRUCTURE_OPERATION_COUNT = TYPE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link uml2idl.metamodel.idl.impl.FunctionImpl <em>Function</em>}' class.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see uml2idl.metamodel.idl.impl.FunctionImpl
-	 * @see uml2idl.metamodel.idl.impl.IdlPackageImpl#getFunction()
 	 * @generated
+	 * @ordered
 	 */
-	int FUNCTION = 3;
+	int FIELD__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FIELD__TYPE = 1;
+
+	/**
+	 * The number of structural features of the '<em>Field</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FIELD_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Field</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FIELD_OPERATION_COUNT = 0;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -234,13 +326,13 @@ public interface IdlPackage extends EPackage {
 	int FUNCTION__NAME = 0;
 
 	/**
-	 * The feature id for the '<em><b>Fieldfunction</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Field</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION__FIELDFUNCTION = 1;
+	int FUNCTION__FIELD = 1;
 
 	/**
 	 * The number of structural features of the '<em>Function</em>' class.
@@ -261,540 +353,6 @@ public interface IdlPackage extends EPackage {
 	int FUNCTION_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link uml2idl.metamodel.idl.Field <em>Field</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see uml2idl.metamodel.idl.Field
-	 * @see uml2idl.metamodel.idl.impl.IdlPackageImpl#getField()
-	 * @generated
-	 */
-	int FIELD = 5;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FIELD__ID = 0;
-
-	/**
-	 * The number of structural features of the '<em>Field</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FIELD_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>Field</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FIELD_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link uml2idl.metamodel.idl.impl.FieldBoolImpl <em>Field Bool</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see uml2idl.metamodel.idl.impl.FieldBoolImpl
-	 * @see uml2idl.metamodel.idl.impl.IdlPackageImpl#getFieldBool()
-	 * @generated
-	 */
-	int FIELD_BOOL = 4;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FIELD_BOOL__ID = FIELD__ID;
-
-	/**
-	 * The feature id for the '<em><b>Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FIELD_BOOL__VALUE = FIELD_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Field Bool</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FIELD_BOOL_FEATURE_COUNT = FIELD_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Field Bool</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FIELD_BOOL_OPERATION_COUNT = FIELD_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link uml2idl.metamodel.idl.impl.FieldByteImpl <em>Field Byte</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see uml2idl.metamodel.idl.impl.FieldByteImpl
-	 * @see uml2idl.metamodel.idl.impl.IdlPackageImpl#getFieldByte()
-	 * @generated
-	 */
-	int FIELD_BYTE = 6;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FIELD_BYTE__ID = FIELD__ID;
-
-	/**
-	 * The feature id for the '<em><b>Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FIELD_BYTE__VALUE = FIELD_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Field Byte</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FIELD_BYTE_FEATURE_COUNT = FIELD_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Field Byte</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FIELD_BYTE_OPERATION_COUNT = FIELD_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link uml2idl.metamodel.idl.impl.FieldByteArrayImpl <em>Field Byte Array</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see uml2idl.metamodel.idl.impl.FieldByteArrayImpl
-	 * @see uml2idl.metamodel.idl.impl.IdlPackageImpl#getFieldByteArray()
-	 * @generated
-	 */
-	int FIELD_BYTE_ARRAY = 7;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FIELD_BYTE_ARRAY__ID = FIELD__ID;
-
-	/**
-	 * The feature id for the '<em><b>Values</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FIELD_BYTE_ARRAY__VALUES = FIELD_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Field Byte Array</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FIELD_BYTE_ARRAY_FEATURE_COUNT = FIELD_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Field Byte Array</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FIELD_BYTE_ARRAY_OPERATION_COUNT = FIELD_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link uml2idl.metamodel.idl.impl.FieldDoubleImpl <em>Field Double</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see uml2idl.metamodel.idl.impl.FieldDoubleImpl
-	 * @see uml2idl.metamodel.idl.impl.IdlPackageImpl#getFieldDouble()
-	 * @generated
-	 */
-	int FIELD_DOUBLE = 8;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FIELD_DOUBLE__ID = FIELD__ID;
-
-	/**
-	 * The feature id for the '<em><b>Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FIELD_DOUBLE__VALUE = FIELD_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Field Double</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FIELD_DOUBLE_FEATURE_COUNT = FIELD_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Field Double</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FIELD_DOUBLE_OPERATION_COUNT = FIELD_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link uml2idl.metamodel.idl.impl.FieldI16Impl <em>Field I16</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see uml2idl.metamodel.idl.impl.FieldI16Impl
-	 * @see uml2idl.metamodel.idl.impl.IdlPackageImpl#getFieldI16()
-	 * @generated
-	 */
-	int FIELD_I16 = 9;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FIELD_I16__ID = FIELD__ID;
-
-	/**
-	 * The feature id for the '<em><b>Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FIELD_I16__VALUE = FIELD_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Field I16</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FIELD_I16_FEATURE_COUNT = FIELD_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Field I16</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FIELD_I16_OPERATION_COUNT = FIELD_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link uml2idl.metamodel.idl.impl.FieldI32Impl <em>Field I32</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see uml2idl.metamodel.idl.impl.FieldI32Impl
-	 * @see uml2idl.metamodel.idl.impl.IdlPackageImpl#getFieldI32()
-	 * @generated
-	 */
-	int FIELD_I32 = 10;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FIELD_I32__ID = FIELD__ID;
-
-	/**
-	 * The feature id for the '<em><b>Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FIELD_I32__VALUE = FIELD_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Field I32</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FIELD_I32_FEATURE_COUNT = FIELD_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Field I32</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FIELD_I32_OPERATION_COUNT = FIELD_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link uml2idl.metamodel.idl.impl.FieldLongImpl <em>Field Long</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see uml2idl.metamodel.idl.impl.FieldLongImpl
-	 * @see uml2idl.metamodel.idl.impl.IdlPackageImpl#getFieldLong()
-	 * @generated
-	 */
-	int FIELD_LONG = 11;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FIELD_LONG__ID = FIELD__ID;
-
-	/**
-	 * The feature id for the '<em><b>Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FIELD_LONG__VALUE = FIELD_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Field Long</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FIELD_LONG_FEATURE_COUNT = FIELD_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Field Long</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FIELD_LONG_OPERATION_COUNT = FIELD_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link uml2idl.metamodel.idl.impl.FieldStringImpl <em>Field String</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see uml2idl.metamodel.idl.impl.FieldStringImpl
-	 * @see uml2idl.metamodel.idl.impl.IdlPackageImpl#getFieldString()
-	 * @generated
-	 */
-	int FIELD_STRING = 12;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FIELD_STRING__ID = FIELD__ID;
-
-	/**
-	 * The feature id for the '<em><b>Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FIELD_STRING__VALUE = FIELD_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Field String</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FIELD_STRING_FEATURE_COUNT = FIELD_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Field String</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FIELD_STRING_OPERATION_COUNT = FIELD_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link uml2idl.metamodel.idl.impl.FieldStructImpl <em>Field Struct</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see uml2idl.metamodel.idl.impl.FieldStructImpl
-	 * @see uml2idl.metamodel.idl.impl.IdlPackageImpl#getFieldStruct()
-	 * @generated
-	 */
-	int FIELD_STRUCT = 13;
-
-	/**
-	 * The feature id for the '<em><b>Field</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FIELD_STRUCT__FIELD = 0;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FIELD_STRUCT__NAME = 1;
-
-	/**
-	 * The number of structural features of the '<em>Field Struct</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FIELD_STRUCT_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>Field Struct</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FIELD_STRUCT_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link uml2idl.metamodel.idl.impl.FieldFunctionImpl <em>Field Function</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see uml2idl.metamodel.idl.impl.FieldFunctionImpl
-	 * @see uml2idl.metamodel.idl.impl.IdlPackageImpl#getFieldFunction()
-	 * @generated
-	 */
-	int FIELD_FUNCTION = 14;
-
-	/**
-	 * The feature id for the '<em><b>Field</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FIELD_FUNCTION__FIELD = 0;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FIELD_FUNCTION__NAME = 1;
-
-	/**
-	 * The number of structural features of the '<em>Field Function</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FIELD_FUNCTION_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>Field Function</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FIELD_FUNCTION_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link uml2idl.metamodel.idl.impl.TypeDefImpl <em>Type Def</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see uml2idl.metamodel.idl.impl.TypeDefImpl
-	 * @see uml2idl.metamodel.idl.impl.IdlPackageImpl#getTypeDef()
-	 * @generated
-	 */
-	int TYPE_DEF = 15;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TYPE_DEF__NAME = 0;
-
-	/**
-	 * The number of structural features of the '<em>Type Def</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TYPE_DEF_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>Type Def</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TYPE_DEF_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link uml2idl.metamodel.idl.AcceptedType <em>Accepted Type</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -802,7 +360,7 @@ public interface IdlPackage extends EPackage {
 	 * @see uml2idl.metamodel.idl.impl.IdlPackageImpl#getAcceptedType()
 	 * @generated
 	 */
-	int ACCEPTED_TYPE = 16;
+	int ACCEPTED_TYPE = 6;
 
 	/**
 	 * The meta object id for the '{@link uml2idl.metamodel.idl.NewEnum2 <em>New Enum2</em>}' enum.
@@ -812,7 +370,7 @@ public interface IdlPackage extends EPackage {
 	 * @see uml2idl.metamodel.idl.impl.IdlPackageImpl#getNewEnum2()
 	 * @generated
 	 */
-	int NEW_ENUM2 = 17;
+	int NEW_ENUM2 = 7;
 
 	/**
 	 * The meta object id for the '<em>bool</em>' data type.
@@ -822,7 +380,7 @@ public interface IdlPackage extends EPackage {
 	 * @see uml2idl.metamodel.idl.impl.IdlPackageImpl#getbool()
 	 * @generated
 	 */
-	int BOOL = 18;
+	int BOOL = 8;
 
 	/**
 	 * The meta object id for the '<em>byte</em>' data type.
@@ -832,7 +390,7 @@ public interface IdlPackage extends EPackage {
 	 * @see uml2idl.metamodel.idl.impl.IdlPackageImpl#getbyte()
 	 * @generated
 	 */
-	int BYTE = 19;
+	int BYTE = 9;
 
 	/**
 	 * The meta object id for the '<em>i16</em>' data type.
@@ -842,7 +400,7 @@ public interface IdlPackage extends EPackage {
 	 * @see uml2idl.metamodel.idl.impl.IdlPackageImpl#geti16()
 	 * @generated
 	 */
-	int I16 = 20;
+	int I16 = 10;
 
 	/**
 	 * The meta object id for the '<em>i32</em>' data type.
@@ -852,7 +410,7 @@ public interface IdlPackage extends EPackage {
 	 * @see uml2idl.metamodel.idl.impl.IdlPackageImpl#geti32()
 	 * @generated
 	 */
-	int I32 = 21;
+	int I32 = 11;
 
 	/**
 	 * The meta object id for the '<em>long</em>' data type.
@@ -862,7 +420,7 @@ public interface IdlPackage extends EPackage {
 	 * @see uml2idl.metamodel.idl.impl.IdlPackageImpl#getlong()
 	 * @generated
 	 */
-	int LONG = 22;
+	int LONG = 12;
 
 	/**
 	 * The meta object id for the '<em>double</em>' data type.
@@ -872,7 +430,7 @@ public interface IdlPackage extends EPackage {
 	 * @see uml2idl.metamodel.idl.impl.IdlPackageImpl#getdouble()
 	 * @generated
 	 */
-	int DOUBLE = 23;
+	int DOUBLE = 13;
 
 	/**
 	 * The meta object id for the '<em>string</em>' data type.
@@ -882,7 +440,7 @@ public interface IdlPackage extends EPackage {
 	 * @see uml2idl.metamodel.idl.impl.IdlPackageImpl#getstring()
 	 * @generated
 	 */
-	int STRING = 24;
+	int STRING = 14;
 
 	/**
 	 * The meta object id for the '<em>byte Array</em>' data type.
@@ -892,7 +450,7 @@ public interface IdlPackage extends EPackage {
 	 * @see uml2idl.metamodel.idl.impl.IdlPackageImpl#getbyteArray()
 	 * @generated
 	 */
-	int BYTE_ARRAY = 25;
+	int BYTE_ARRAY = 15;
 
 	/**
 	 * Returns the meta object for class '{@link uml2idl.metamodel.idl.Service <em>Service</em>}'.
@@ -970,17 +528,6 @@ public interface IdlPackage extends EPackage {
 	EReference getIDLModel_Structures();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link uml2idl.metamodel.idl.IDLModel#getTypedef <em>Typedef</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Typedef</em>'.
-	 * @see uml2idl.metamodel.idl.IDLModel#getTypedef()
-	 * @see #getIDLModel()
-	 * @generated
-	 */
-	EReference getIDLModel_Typedef();
-
-	/**
 	 * Returns the meta object for class '{@link uml2idl.metamodel.idl.Structure <em>Structure</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -991,26 +538,15 @@ public interface IdlPackage extends EPackage {
 	EClass getStructure();
 
 	/**
-	 * Returns the meta object for the attribute '{@link uml2idl.metamodel.idl.Structure#getName <em>Name</em>}'.
+	 * Returns the meta object for the containment reference list '{@link uml2idl.metamodel.idl.Structure#getField <em>Field</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see uml2idl.metamodel.idl.Structure#getName()
+	 * @return the meta object for the containment reference list '<em>Field</em>'.
+	 * @see uml2idl.metamodel.idl.Structure#getField()
 	 * @see #getStructure()
 	 * @generated
 	 */
-	EAttribute getStructure_Name();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link uml2idl.metamodel.idl.Structure#getFieldstruct <em>Fieldstruct</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Fieldstruct</em>'.
-	 * @see uml2idl.metamodel.idl.Structure#getFieldstruct()
-	 * @see #getStructure()
-	 * @generated
-	 */
-	EReference getStructure_Fieldstruct();
+	EReference getStructure_Field();
 
 	/**
 	 * Returns the meta object for class '{@link uml2idl.metamodel.idl.Function <em>Function</em>}'.
@@ -1034,36 +570,47 @@ public interface IdlPackage extends EPackage {
 	EAttribute getFunction_Name();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link uml2idl.metamodel.idl.Function#getFieldfunction <em>Fieldfunction</em>}'.
+	 * Returns the meta object for the containment reference list '{@link uml2idl.metamodel.idl.Function#getField <em>Field</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Fieldfunction</em>'.
-	 * @see uml2idl.metamodel.idl.Function#getFieldfunction()
+	 * @return the meta object for the containment reference list '<em>Field</em>'.
+	 * @see uml2idl.metamodel.idl.Function#getField()
 	 * @see #getFunction()
 	 * @generated
 	 */
-	EReference getFunction_Fieldfunction();
+	EReference getFunction_Field();
 
 	/**
-	 * Returns the meta object for class '{@link uml2idl.metamodel.idl.FieldBool <em>Field Bool</em>}'.
+	 * Returns the meta object for class '{@link uml2idl.metamodel.idl.Type <em>Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Field Bool</em>'.
-	 * @see uml2idl.metamodel.idl.FieldBool
+	 * @return the meta object for class '<em>Type</em>'.
+	 * @see uml2idl.metamodel.idl.Type
 	 * @generated
 	 */
-	EClass getFieldBool();
+	EClass getType();
 
 	/**
-	 * Returns the meta object for the attribute '{@link uml2idl.metamodel.idl.FieldBool#getValue <em>Value</em>}'.
+	 * Returns the meta object for the attribute '{@link uml2idl.metamodel.idl.Type#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see uml2idl.metamodel.idl.FieldBool#getValue()
-	 * @see #getFieldBool()
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see uml2idl.metamodel.idl.Type#getName()
+	 * @see #getType()
 	 * @generated
 	 */
-	EAttribute getFieldBool_Value();
+	EAttribute getType_Name();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link uml2idl.metamodel.idl.Type#getEType <em>EType</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>EType</em>'.
+	 * @see uml2idl.metamodel.idl.Type#getEType()
+	 * @see #getType()
+	 * @generated
+	 */
+	EReference getType_EType();
 
 	/**
 	 * Returns the meta object for class '{@link uml2idl.metamodel.idl.Field <em>Field</em>}'.
@@ -1076,247 +623,26 @@ public interface IdlPackage extends EPackage {
 	EClass getField();
 
 	/**
-	 * Returns the meta object for the attribute '{@link uml2idl.metamodel.idl.Field#getId <em>Id</em>}'.
+	 * Returns the meta object for the attribute '{@link uml2idl.metamodel.idl.Field#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Id</em>'.
-	 * @see uml2idl.metamodel.idl.Field#getId()
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see uml2idl.metamodel.idl.Field#getName()
 	 * @see #getField()
 	 * @generated
 	 */
-	EAttribute getField_Id();
+	EAttribute getField_Name();
 
 	/**
-	 * Returns the meta object for class '{@link uml2idl.metamodel.idl.FieldByte <em>Field Byte</em>}'.
+	 * Returns the meta object for the containment reference list '{@link uml2idl.metamodel.idl.Field#getType <em>Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Field Byte</em>'.
-	 * @see uml2idl.metamodel.idl.FieldByte
+	 * @return the meta object for the containment reference list '<em>Type</em>'.
+	 * @see uml2idl.metamodel.idl.Field#getType()
+	 * @see #getField()
 	 * @generated
 	 */
-	EClass getFieldByte();
-
-	/**
-	 * Returns the meta object for the attribute '{@link uml2idl.metamodel.idl.FieldByte#getValue <em>Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see uml2idl.metamodel.idl.FieldByte#getValue()
-	 * @see #getFieldByte()
-	 * @generated
-	 */
-	EAttribute getFieldByte_Value();
-
-	/**
-	 * Returns the meta object for class '{@link uml2idl.metamodel.idl.FieldByteArray <em>Field Byte Array</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Field Byte Array</em>'.
-	 * @see uml2idl.metamodel.idl.FieldByteArray
-	 * @generated
-	 */
-	EClass getFieldByteArray();
-
-	/**
-	 * Returns the meta object for the attribute '{@link uml2idl.metamodel.idl.FieldByteArray#getValues <em>Values</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Values</em>'.
-	 * @see uml2idl.metamodel.idl.FieldByteArray#getValues()
-	 * @see #getFieldByteArray()
-	 * @generated
-	 */
-	EAttribute getFieldByteArray_Values();
-
-	/**
-	 * Returns the meta object for class '{@link uml2idl.metamodel.idl.FieldDouble <em>Field Double</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Field Double</em>'.
-	 * @see uml2idl.metamodel.idl.FieldDouble
-	 * @generated
-	 */
-	EClass getFieldDouble();
-
-	/**
-	 * Returns the meta object for the attribute '{@link uml2idl.metamodel.idl.FieldDouble#getValue <em>Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see uml2idl.metamodel.idl.FieldDouble#getValue()
-	 * @see #getFieldDouble()
-	 * @generated
-	 */
-	EAttribute getFieldDouble_Value();
-
-	/**
-	 * Returns the meta object for class '{@link uml2idl.metamodel.idl.FieldI16 <em>Field I16</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Field I16</em>'.
-	 * @see uml2idl.metamodel.idl.FieldI16
-	 * @generated
-	 */
-	EClass getFieldI16();
-
-	/**
-	 * Returns the meta object for the attribute '{@link uml2idl.metamodel.idl.FieldI16#getValue <em>Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see uml2idl.metamodel.idl.FieldI16#getValue()
-	 * @see #getFieldI16()
-	 * @generated
-	 */
-	EAttribute getFieldI16_Value();
-
-	/**
-	 * Returns the meta object for class '{@link uml2idl.metamodel.idl.FieldI32 <em>Field I32</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Field I32</em>'.
-	 * @see uml2idl.metamodel.idl.FieldI32
-	 * @generated
-	 */
-	EClass getFieldI32();
-
-	/**
-	 * Returns the meta object for the attribute '{@link uml2idl.metamodel.idl.FieldI32#getValue <em>Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see uml2idl.metamodel.idl.FieldI32#getValue()
-	 * @see #getFieldI32()
-	 * @generated
-	 */
-	EAttribute getFieldI32_Value();
-
-	/**
-	 * Returns the meta object for class '{@link uml2idl.metamodel.idl.FieldLong <em>Field Long</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Field Long</em>'.
-	 * @see uml2idl.metamodel.idl.FieldLong
-	 * @generated
-	 */
-	EClass getFieldLong();
-
-	/**
-	 * Returns the meta object for the attribute '{@link uml2idl.metamodel.idl.FieldLong#getValue <em>Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see uml2idl.metamodel.idl.FieldLong#getValue()
-	 * @see #getFieldLong()
-	 * @generated
-	 */
-	EAttribute getFieldLong_Value();
-
-	/**
-	 * Returns the meta object for class '{@link uml2idl.metamodel.idl.FieldString <em>Field String</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Field String</em>'.
-	 * @see uml2idl.metamodel.idl.FieldString
-	 * @generated
-	 */
-	EClass getFieldString();
-
-	/**
-	 * Returns the meta object for the attribute '{@link uml2idl.metamodel.idl.FieldString#getValue <em>Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see uml2idl.metamodel.idl.FieldString#getValue()
-	 * @see #getFieldString()
-	 * @generated
-	 */
-	EAttribute getFieldString_Value();
-
-	/**
-	 * Returns the meta object for class '{@link uml2idl.metamodel.idl.FieldStruct <em>Field Struct</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Field Struct</em>'.
-	 * @see uml2idl.metamodel.idl.FieldStruct
-	 * @generated
-	 */
-	EClass getFieldStruct();
-
-	/**
-	 * Returns the meta object for the reference '{@link uml2idl.metamodel.idl.FieldStruct#getField <em>Field</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Field</em>'.
-	 * @see uml2idl.metamodel.idl.FieldStruct#getField()
-	 * @see #getFieldStruct()
-	 * @generated
-	 */
-	EReference getFieldStruct_Field();
-
-	/**
-	 * Returns the meta object for the attribute '{@link uml2idl.metamodel.idl.FieldStruct#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see uml2idl.metamodel.idl.FieldStruct#getName()
-	 * @see #getFieldStruct()
-	 * @generated
-	 */
-	EAttribute getFieldStruct_Name();
-
-	/**
-	 * Returns the meta object for class '{@link uml2idl.metamodel.idl.FieldFunction <em>Field Function</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Field Function</em>'.
-	 * @see uml2idl.metamodel.idl.FieldFunction
-	 * @generated
-	 */
-	EClass getFieldFunction();
-
-	/**
-	 * Returns the meta object for the reference '{@link uml2idl.metamodel.idl.FieldFunction#getField <em>Field</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Field</em>'.
-	 * @see uml2idl.metamodel.idl.FieldFunction#getField()
-	 * @see #getFieldFunction()
-	 * @generated
-	 */
-	EReference getFieldFunction_Field();
-
-	/**
-	 * Returns the meta object for the attribute '{@link uml2idl.metamodel.idl.FieldFunction#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see uml2idl.metamodel.idl.FieldFunction#getName()
-	 * @see #getFieldFunction()
-	 * @generated
-	 */
-	EAttribute getFieldFunction_Name();
-
-	/**
-	 * Returns the meta object for class '{@link uml2idl.metamodel.idl.TypeDef <em>Type Def</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Type Def</em>'.
-	 * @see uml2idl.metamodel.idl.TypeDef
-	 * @generated
-	 */
-	EClass getTypeDef();
-
-	/**
-	 * Returns the meta object for the attribute '{@link uml2idl.metamodel.idl.TypeDef#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see uml2idl.metamodel.idl.TypeDef#getName()
-	 * @see #getTypeDef()
-	 * @generated
-	 */
-	EAttribute getTypeDef_Name();
+	EReference getField_Type();
 
 	/**
 	 * Returns the meta object for enum '{@link uml2idl.metamodel.idl.AcceptedType <em>Accepted Type</em>}'.
@@ -1510,14 +836,6 @@ public interface IdlPackage extends EPackage {
 		EReference IDL_MODEL__STRUCTURES = eINSTANCE.getIDLModel_Structures();
 
 		/**
-		 * The meta object literal for the '<em><b>Typedef</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference IDL_MODEL__TYPEDEF = eINSTANCE.getIDLModel_Typedef();
-
-		/**
 		 * The meta object literal for the '{@link uml2idl.metamodel.idl.impl.StructureImpl <em>Structure</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1528,20 +846,12 @@ public interface IdlPackage extends EPackage {
 		EClass STRUCTURE = eINSTANCE.getStructure();
 
 		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Field</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute STRUCTURE__NAME = eINSTANCE.getStructure_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Fieldstruct</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference STRUCTURE__FIELDSTRUCT = eINSTANCE.getStructure_Fieldstruct();
+		EReference STRUCTURE__FIELD = eINSTANCE.getStructure_Field();
 
 		/**
 		 * The meta object literal for the '{@link uml2idl.metamodel.idl.impl.FunctionImpl <em>Function</em>}' class.
@@ -1562,244 +872,64 @@ public interface IdlPackage extends EPackage {
 		EAttribute FUNCTION__NAME = eINSTANCE.getFunction_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Fieldfunction</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Field</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference FUNCTION__FIELDFUNCTION = eINSTANCE.getFunction_Fieldfunction();
+		EReference FUNCTION__FIELD = eINSTANCE.getFunction_Field();
 
 		/**
-		 * The meta object literal for the '{@link uml2idl.metamodel.idl.impl.FieldBoolImpl <em>Field Bool</em>}' class.
+		 * The meta object literal for the '{@link uml2idl.metamodel.idl.impl.TypeImpl <em>Type</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see uml2idl.metamodel.idl.impl.FieldBoolImpl
-		 * @see uml2idl.metamodel.idl.impl.IdlPackageImpl#getFieldBool()
+		 * @see uml2idl.metamodel.idl.impl.TypeImpl
+		 * @see uml2idl.metamodel.idl.impl.IdlPackageImpl#getType()
 		 * @generated
 		 */
-		EClass FIELD_BOOL = eINSTANCE.getFieldBool();
+		EClass TYPE = eINSTANCE.getType();
 
 		/**
-		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute FIELD_BOOL__VALUE = eINSTANCE.getFieldBool_Value();
+		EAttribute TYPE__NAME = eINSTANCE.getType_Name();
 
 		/**
-		 * The meta object literal for the '{@link uml2idl.metamodel.idl.Field <em>Field</em>}' class.
+		 * The meta object literal for the '<em><b>EType</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see uml2idl.metamodel.idl.Field
+		 * @generated
+		 */
+		EReference TYPE__ETYPE = eINSTANCE.getType_EType();
+
+		/**
+		 * The meta object literal for the '{@link uml2idl.metamodel.idl.impl.FieldImpl <em>Field</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see uml2idl.metamodel.idl.impl.FieldImpl
 		 * @see uml2idl.metamodel.idl.impl.IdlPackageImpl#getField()
 		 * @generated
 		 */
 		EClass FIELD = eINSTANCE.getField();
 
 		/**
-		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute FIELD__ID = eINSTANCE.getField_Id();
-
-		/**
-		 * The meta object literal for the '{@link uml2idl.metamodel.idl.impl.FieldByteImpl <em>Field Byte</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see uml2idl.metamodel.idl.impl.FieldByteImpl
-		 * @see uml2idl.metamodel.idl.impl.IdlPackageImpl#getFieldByte()
-		 * @generated
-		 */
-		EClass FIELD_BYTE = eINSTANCE.getFieldByte();
-
-		/**
-		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute FIELD_BYTE__VALUE = eINSTANCE.getFieldByte_Value();
-
-		/**
-		 * The meta object literal for the '{@link uml2idl.metamodel.idl.impl.FieldByteArrayImpl <em>Field Byte Array</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see uml2idl.metamodel.idl.impl.FieldByteArrayImpl
-		 * @see uml2idl.metamodel.idl.impl.IdlPackageImpl#getFieldByteArray()
-		 * @generated
-		 */
-		EClass FIELD_BYTE_ARRAY = eINSTANCE.getFieldByteArray();
-
-		/**
-		 * The meta object literal for the '<em><b>Values</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute FIELD_BYTE_ARRAY__VALUES = eINSTANCE.getFieldByteArray_Values();
-
-		/**
-		 * The meta object literal for the '{@link uml2idl.metamodel.idl.impl.FieldDoubleImpl <em>Field Double</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see uml2idl.metamodel.idl.impl.FieldDoubleImpl
-		 * @see uml2idl.metamodel.idl.impl.IdlPackageImpl#getFieldDouble()
-		 * @generated
-		 */
-		EClass FIELD_DOUBLE = eINSTANCE.getFieldDouble();
-
-		/**
-		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute FIELD_DOUBLE__VALUE = eINSTANCE.getFieldDouble_Value();
-
-		/**
-		 * The meta object literal for the '{@link uml2idl.metamodel.idl.impl.FieldI16Impl <em>Field I16</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see uml2idl.metamodel.idl.impl.FieldI16Impl
-		 * @see uml2idl.metamodel.idl.impl.IdlPackageImpl#getFieldI16()
-		 * @generated
-		 */
-		EClass FIELD_I16 = eINSTANCE.getFieldI16();
-
-		/**
-		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute FIELD_I16__VALUE = eINSTANCE.getFieldI16_Value();
-
-		/**
-		 * The meta object literal for the '{@link uml2idl.metamodel.idl.impl.FieldI32Impl <em>Field I32</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see uml2idl.metamodel.idl.impl.FieldI32Impl
-		 * @see uml2idl.metamodel.idl.impl.IdlPackageImpl#getFieldI32()
-		 * @generated
-		 */
-		EClass FIELD_I32 = eINSTANCE.getFieldI32();
-
-		/**
-		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute FIELD_I32__VALUE = eINSTANCE.getFieldI32_Value();
-
-		/**
-		 * The meta object literal for the '{@link uml2idl.metamodel.idl.impl.FieldLongImpl <em>Field Long</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see uml2idl.metamodel.idl.impl.FieldLongImpl
-		 * @see uml2idl.metamodel.idl.impl.IdlPackageImpl#getFieldLong()
-		 * @generated
-		 */
-		EClass FIELD_LONG = eINSTANCE.getFieldLong();
-
-		/**
-		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute FIELD_LONG__VALUE = eINSTANCE.getFieldLong_Value();
-
-		/**
-		 * The meta object literal for the '{@link uml2idl.metamodel.idl.impl.FieldStringImpl <em>Field String</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see uml2idl.metamodel.idl.impl.FieldStringImpl
-		 * @see uml2idl.metamodel.idl.impl.IdlPackageImpl#getFieldString()
-		 * @generated
-		 */
-		EClass FIELD_STRING = eINSTANCE.getFieldString();
-
-		/**
-		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute FIELD_STRING__VALUE = eINSTANCE.getFieldString_Value();
-
-		/**
-		 * The meta object literal for the '{@link uml2idl.metamodel.idl.impl.FieldStructImpl <em>Field Struct</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see uml2idl.metamodel.idl.impl.FieldStructImpl
-		 * @see uml2idl.metamodel.idl.impl.IdlPackageImpl#getFieldStruct()
-		 * @generated
-		 */
-		EClass FIELD_STRUCT = eINSTANCE.getFieldStruct();
-
-		/**
-		 * The meta object literal for the '<em><b>Field</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference FIELD_STRUCT__FIELD = eINSTANCE.getFieldStruct_Field();
-
-		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute FIELD_STRUCT__NAME = eINSTANCE.getFieldStruct_Name();
+		EAttribute FIELD__NAME = eINSTANCE.getField_Name();
 
 		/**
-		 * The meta object literal for the '{@link uml2idl.metamodel.idl.impl.FieldFunctionImpl <em>Field Function</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see uml2idl.metamodel.idl.impl.FieldFunctionImpl
-		 * @see uml2idl.metamodel.idl.impl.IdlPackageImpl#getFieldFunction()
-		 * @generated
-		 */
-		EClass FIELD_FUNCTION = eINSTANCE.getFieldFunction();
-
-		/**
-		 * The meta object literal for the '<em><b>Field</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Type</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference FIELD_FUNCTION__FIELD = eINSTANCE.getFieldFunction_Field();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute FIELD_FUNCTION__NAME = eINSTANCE.getFieldFunction_Name();
-
-		/**
-		 * The meta object literal for the '{@link uml2idl.metamodel.idl.impl.TypeDefImpl <em>Type Def</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see uml2idl.metamodel.idl.impl.TypeDefImpl
-		 * @see uml2idl.metamodel.idl.impl.IdlPackageImpl#getTypeDef()
-		 * @generated
-		 */
-		EClass TYPE_DEF = eINSTANCE.getTypeDef();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute TYPE_DEF__NAME = eINSTANCE.getTypeDef_Name();
+		EReference FIELD__TYPE = eINSTANCE.getField_Type();
 
 		/**
 		 * The meta object literal for the '{@link uml2idl.metamodel.idl.AcceptedType <em>Accepted Type</em>}' enum.

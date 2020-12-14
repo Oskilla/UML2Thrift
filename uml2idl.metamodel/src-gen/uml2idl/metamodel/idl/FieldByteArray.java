@@ -20,7 +20,7 @@ import oracle.dss.util.xdo.common.io.ByteArray;
  * @model
  * @generated
  */
-public interface FieldByteArray extends Field {
+public interface FieldByteArray extends BoundedField {
 	/**
 	 * Returns the value of the '<em><b>Values</b></em>' attribute.
 	 * <!-- begin-user-doc -->

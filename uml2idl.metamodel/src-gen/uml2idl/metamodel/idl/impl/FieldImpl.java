@@ -2,52 +2,41 @@
  */
 package uml2idl.metamodel.idl.impl;
 
+import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import uml2idl.metamodel.idl.FieldByte;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
+
+import uml2idl.metamodel.idl.Field;
 import uml2idl.metamodel.idl.IdlPackage;
+import uml2idl.metamodel.idl.Type;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Field Byte</b></em>'.
+ * An implementation of the model object '<em><b>Field</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link uml2idl.metamodel.idl.impl.FieldByteImpl#getId <em>Id</em>}</li>
- *   <li>{@link uml2idl.metamodel.idl.impl.FieldByteImpl#getName <em>Name</em>}</li>
- *   <li>{@link uml2idl.metamodel.idl.impl.FieldByteImpl#getValue <em>Value</em>}</li>
+ *   <li>{@link uml2idl.metamodel.idl.impl.FieldImpl#getName <em>Name</em>}</li>
+ *   <li>{@link uml2idl.metamodel.idl.impl.FieldImpl#getType <em>Type</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class FieldByteImpl extends MinimalEObjectImpl.Container implements FieldByte {
-	/**
-	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getId()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final int ID_EDEFAULT = 0;
-
-	/**
-	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getId()
-	 * @generated
-	 * @ordered
-	 */
-	protected int id = ID_EDEFAULT;
-
+public class FieldImpl extends MinimalEObjectImpl.Container implements Field {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -69,31 +58,21 @@ public class FieldByteImpl extends MinimalEObjectImpl.Container implements Field
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
+	 * The cached value of the '{@link #getType() <em>Type</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getValue()
+	 * @see #getType()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Byte VALUE_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getValue()
-	 * @generated
-	 * @ordered
-	 */
-	protected Byte value = VALUE_EDEFAULT;
+	protected EList<Type> type;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected FieldByteImpl() {
+	protected FieldImpl() {
 		super();
 	}
 
@@ -104,28 +83,7 @@ public class FieldByteImpl extends MinimalEObjectImpl.Container implements Field
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return IdlPackage.Literals.FIELD_BYTE;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public int getId() {
-		return id;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setId(int newId) {
-		int oldId = id;
-		id = newId;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, IdlPackage.FIELD_BYTE__ID, oldId, id));
+		return IdlPackage.Literals.FIELD;
 	}
 
 	/**
@@ -146,7 +104,7 @@ public class FieldByteImpl extends MinimalEObjectImpl.Container implements Field
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, IdlPackage.FIELD_BYTE__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, IdlPackage.FIELD__NAME, oldName, name));
 	}
 
 	/**
@@ -154,8 +112,11 @@ public class FieldByteImpl extends MinimalEObjectImpl.Container implements Field
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Byte getValue() {
-		return value;
+	public EList<Type> getType() {
+		if (type == null) {
+			type = new EObjectContainmentEList<Type>(Type.class, this, IdlPackage.FIELD__TYPE);
+		}
+		return type;
 	}
 
 	/**
@@ -163,11 +124,13 @@ public class FieldByteImpl extends MinimalEObjectImpl.Container implements Field
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setValue(Byte newValue) {
-		Byte oldValue = value;
-		value = newValue;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, IdlPackage.FIELD_BYTE__VALUE, oldValue, value));
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+		case IdlPackage.FIELD__TYPE:
+			return ((InternalEList<?>) getType()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -178,12 +141,10 @@ public class FieldByteImpl extends MinimalEObjectImpl.Container implements Field
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case IdlPackage.FIELD_BYTE__ID:
-			return getId();
-		case IdlPackage.FIELD_BYTE__NAME:
+		case IdlPackage.FIELD__NAME:
 			return getName();
-		case IdlPackage.FIELD_BYTE__VALUE:
-			return getValue();
+		case IdlPackage.FIELD__TYPE:
+			return getType();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -193,17 +154,16 @@ public class FieldByteImpl extends MinimalEObjectImpl.Container implements Field
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case IdlPackage.FIELD_BYTE__ID:
-			setId((Integer) newValue);
-			return;
-		case IdlPackage.FIELD_BYTE__NAME:
+		case IdlPackage.FIELD__NAME:
 			setName((String) newValue);
 			return;
-		case IdlPackage.FIELD_BYTE__VALUE:
-			setValue((Byte) newValue);
+		case IdlPackage.FIELD__TYPE:
+			getType().clear();
+			getType().addAll((Collection<? extends Type>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -217,14 +177,11 @@ public class FieldByteImpl extends MinimalEObjectImpl.Container implements Field
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case IdlPackage.FIELD_BYTE__ID:
-			setId(ID_EDEFAULT);
-			return;
-		case IdlPackage.FIELD_BYTE__NAME:
+		case IdlPackage.FIELD__NAME:
 			setName(NAME_EDEFAULT);
 			return;
-		case IdlPackage.FIELD_BYTE__VALUE:
-			setValue(VALUE_EDEFAULT);
+		case IdlPackage.FIELD__TYPE:
+			getType().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -238,12 +195,10 @@ public class FieldByteImpl extends MinimalEObjectImpl.Container implements Field
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case IdlPackage.FIELD_BYTE__ID:
-			return id != ID_EDEFAULT;
-		case IdlPackage.FIELD_BYTE__NAME:
+		case IdlPackage.FIELD__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-		case IdlPackage.FIELD_BYTE__VALUE:
-			return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
+		case IdlPackage.FIELD__TYPE:
+			return type != null && !type.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -259,14 +214,10 @@ public class FieldByteImpl extends MinimalEObjectImpl.Container implements Field
 			return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (id: ");
-		result.append(id);
-		result.append(", name: ");
+		result.append(" (name: ");
 		result.append(name);
-		result.append(", value: ");
-		result.append(value);
 		result.append(')');
 		return result.toString();
 	}
 
-} //FieldByteImpl
+} //FieldImpl

@@ -30,39 +30,51 @@ lazy rule Operation2Function{
 	to
 		function2 : IDL!Function(
 				name <- operation1.name,
-				fieldfunction <- operation1.ownedParameter->select(element | element.oclIsKindOf(UML!Parameter))->collect(e | thisModule.Parameter2FieldFunction(e))
+				field <- operation1.ownedParameter->select(element | element.oclIsKindOf(UML!Parameter))->collect(e | thisModule.Parameter2Field(e))
 		)
 }
-lazy rule Parameter2FieldFunction{
+
+
+lazy rule Parameter2Field{
 	from
 		parameter1 : UML!Parameter
 	to
-		fieldfunction2 : IDL!FieldFunction(
+		field : IDL!Field(
 				name <- parameter1.name,
-				field <- parameter1.type
+				type <- thisModule.UMLType2IDLType(parameter1.type)
 		)
 }
+
+
+
 lazy rule DataType2Structure{
 	from
 		datatype1 : UML!DataType
 	to
 		structure2 : IDL!Structure(
 				name <- datatype1.name,
-				fieldstruct <- datatype1.ownedAttribute->select(element | element.oclIsKindOf(UML!Property))->collect(e | thisModule.Property2FieldStruct(e)) 
+				field <- datatype1.ownedAttribute->select(element | element.oclIsKindOf(UML!Property))->collect(e | thisModule.Property2Field(e)) 
 			)
 }
 
-lazy rule Property2FieldStruct{
+lazy rule Property2Field{
 	from
 		property1 : UML!Property
 	to
-		fieldstruct2 : IDL!FieldStruct(
-			name <- property1.name
+		field2 : IDL!Field(
+			name <- property1.name,
+			type <- thisModule.UMLType2IDLType(property1.type)
 		)
 	}
 
-lazy rule Type2Field{
+lazy rule UMLType2IDLType{
+	from
+		type1 : UML!Type
+	to
+		type2 : IDL!Type(
+			name <- type1.name
+		)
 	
-
 }
+
 

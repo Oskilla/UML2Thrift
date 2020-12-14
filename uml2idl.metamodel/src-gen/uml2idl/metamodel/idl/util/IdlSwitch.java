@@ -84,21 +84,7 @@ public class IdlSwitch<T> extends Switch<T> {
 			Structure structure = (Structure) theEObject;
 			T result = caseStructure(structure);
 			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case IdlPackage.FUNCTION: {
-			Function function = (Function) theEObject;
-			T result = caseFunction(function);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case IdlPackage.FIELD_BOOL: {
-			FieldBool fieldBool = (FieldBool) theEObject;
-			T result = caseFieldBool(fieldBool);
-			if (result == null)
-				result = caseField(fieldBool);
+				result = caseType(structure);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -110,86 +96,16 @@ public class IdlSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case IdlPackage.FIELD_BYTE: {
-			FieldByte fieldByte = (FieldByte) theEObject;
-			T result = caseFieldByte(fieldByte);
-			if (result == null)
-				result = caseField(fieldByte);
+		case IdlPackage.FUNCTION: {
+			Function function = (Function) theEObject;
+			T result = caseFunction(function);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case IdlPackage.FIELD_BYTE_ARRAY: {
-			FieldByteArray fieldByteArray = (FieldByteArray) theEObject;
-			T result = caseFieldByteArray(fieldByteArray);
-			if (result == null)
-				result = caseField(fieldByteArray);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case IdlPackage.FIELD_DOUBLE: {
-			FieldDouble fieldDouble = (FieldDouble) theEObject;
-			T result = caseFieldDouble(fieldDouble);
-			if (result == null)
-				result = caseField(fieldDouble);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case IdlPackage.FIELD_I16: {
-			FieldI16 fieldI16 = (FieldI16) theEObject;
-			T result = caseFieldI16(fieldI16);
-			if (result == null)
-				result = caseField(fieldI16);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case IdlPackage.FIELD_I32: {
-			FieldI32 fieldI32 = (FieldI32) theEObject;
-			T result = caseFieldI32(fieldI32);
-			if (result == null)
-				result = caseField(fieldI32);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case IdlPackage.FIELD_LONG: {
-			FieldLong fieldLong = (FieldLong) theEObject;
-			T result = caseFieldLong(fieldLong);
-			if (result == null)
-				result = caseField(fieldLong);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case IdlPackage.FIELD_STRING: {
-			FieldString fieldString = (FieldString) theEObject;
-			T result = caseFieldString(fieldString);
-			if (result == null)
-				result = caseField(fieldString);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case IdlPackage.FIELD_STRUCT: {
-			FieldStruct fieldStruct = (FieldStruct) theEObject;
-			T result = caseFieldStruct(fieldStruct);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case IdlPackage.FIELD_FUNCTION: {
-			FieldFunction fieldFunction = (FieldFunction) theEObject;
-			T result = caseFieldFunction(fieldFunction);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case IdlPackage.TYPE_DEF: {
-			TypeDef typeDef = (TypeDef) theEObject;
-			T result = caseTypeDef(typeDef);
+		case IdlPackage.TYPE: {
+			Type type = (Type) theEObject;
+			T result = caseType(type);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -260,17 +176,17 @@ public class IdlSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Field Bool</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Type</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Field Bool</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Type</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseFieldBool(FieldBool object) {
+	public T caseType(Type object) {
 		return null;
 	}
 
@@ -286,156 +202,6 @@ public class IdlSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseField(Field object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Field Byte</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Field Byte</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseFieldByte(FieldByte object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Field Byte Array</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Field Byte Array</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseFieldByteArray(FieldByteArray object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Field Double</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Field Double</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseFieldDouble(FieldDouble object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Field I16</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Field I16</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseFieldI16(FieldI16 object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Field I32</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Field I32</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseFieldI32(FieldI32 object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Field Long</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Field Long</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseFieldLong(FieldLong object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Field String</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Field String</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseFieldString(FieldString object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Field Struct</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Field Struct</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseFieldStruct(FieldStruct object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Field Function</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Field Function</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseFieldFunction(FieldFunction object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Type Def</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Type Def</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseTypeDef(TypeDef object) {
 		return null;
 	}
 

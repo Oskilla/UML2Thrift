@@ -49,6 +49,15 @@ public interface IdlFactory extends EFactory {
 	Structure createStructure();
 
 	/**
+	 * Returns a new object of class '<em>Field</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Field</em>'.
+	 * @generated
+	 */
+	Field createField();
+
+	/**
 	 * Returns a new object of class '<em>Function</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -58,103 +67,13 @@ public interface IdlFactory extends EFactory {
 	Function createFunction();
 
 	/**
-	 * Returns a new object of class '<em>Field Bool</em>'.
+	 * Returns a new object of class '<em>Type</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Field Bool</em>'.
+	 * @return a new object of class '<em>Type</em>'.
 	 * @generated
 	 */
-	FieldBool createFieldBool();
-
-	/**
-	 * Returns a new object of class '<em>Field Byte</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Field Byte</em>'.
-	 * @generated
-	 */
-	FieldByte createFieldByte();
-
-	/**
-	 * Returns a new object of class '<em>Field Byte Array</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Field Byte Array</em>'.
-	 * @generated
-	 */
-	FieldByteArray createFieldByteArray();
-
-	/**
-	 * Returns a new object of class '<em>Field Double</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Field Double</em>'.
-	 * @generated
-	 */
-	FieldDouble createFieldDouble();
-
-	/**
-	 * Returns a new object of class '<em>Field I16</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Field I16</em>'.
-	 * @generated
-	 */
-	FieldI16 createFieldI16();
-
-	/**
-	 * Returns a new object of class '<em>Field I32</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Field I32</em>'.
-	 * @generated
-	 */
-	FieldI32 createFieldI32();
-
-	/**
-	 * Returns a new object of class '<em>Field Long</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Field Long</em>'.
-	 * @generated
-	 */
-	FieldLong createFieldLong();
-
-	/**
-	 * Returns a new object of class '<em>Field String</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Field String</em>'.
-	 * @generated
-	 */
-	FieldString createFieldString();
-
-	/**
-	 * Returns a new object of class '<em>Field Struct</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Field Struct</em>'.
-	 * @generated
-	 */
-	FieldStruct createFieldStruct();
-
-	/**
-	 * Returns a new object of class '<em>Field Function</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Field Function</em>'.
-	 * @generated
-	 */
-	FieldFunction createFieldFunction();
-
-	/**
-	 * Returns a new object of class '<em>Type Def</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Type Def</em>'.
-	 * @generated
-	 */
-	TypeDef createTypeDef();
+	Type createType();
 
 	/**
 	 * Returns the package supported by this factory.

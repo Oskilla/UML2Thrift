@@ -3,19 +3,22 @@
 package uml2idl.metamodel.idl.impl;
 
 import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.notify.NotificationChain;
-import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-import uml2idl.metamodel.idl.FieldFunction;
+
+import uml2idl.metamodel.idl.Field;
 import uml2idl.metamodel.idl.Function;
 import uml2idl.metamodel.idl.IdlPackage;
 
@@ -28,7 +31,7 @@ import uml2idl.metamodel.idl.IdlPackage;
  * </p>
  * <ul>
  *   <li>{@link uml2idl.metamodel.idl.impl.FunctionImpl#getName <em>Name</em>}</li>
- *   <li>{@link uml2idl.metamodel.idl.impl.FunctionImpl#getFieldfunction <em>Fieldfunction</em>}</li>
+ *   <li>{@link uml2idl.metamodel.idl.impl.FunctionImpl#getField <em>Field</em>}</li>
  * </ul>
  *
  * @generated
@@ -55,14 +58,14 @@ public class FunctionImpl extends MinimalEObjectImpl.Container implements Functi
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getFieldfunction() <em>Fieldfunction</em>}' containment reference list.
+	 * The cached value of the '{@link #getField() <em>Field</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getFieldfunction()
+	 * @see #getField()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<FieldFunction> fieldfunction;
+	protected EList<Field> field;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -109,12 +112,11 @@ public class FunctionImpl extends MinimalEObjectImpl.Container implements Functi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<FieldFunction> getFieldfunction() {
-		if (fieldfunction == null) {
-			fieldfunction = new EObjectContainmentEList<FieldFunction>(FieldFunction.class, this,
-					IdlPackage.FUNCTION__FIELDFUNCTION);
+	public EList<Field> getField() {
+		if (field == null) {
+			field = new EObjectContainmentEList<Field>(Field.class, this, IdlPackage.FUNCTION__FIELD);
 		}
-		return fieldfunction;
+		return field;
 	}
 
 	/**
@@ -125,8 +127,8 @@ public class FunctionImpl extends MinimalEObjectImpl.Container implements Functi
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case IdlPackage.FUNCTION__FIELDFUNCTION:
-			return ((InternalEList<?>) getFieldfunction()).basicRemove(otherEnd, msgs);
+		case IdlPackage.FUNCTION__FIELD:
+			return ((InternalEList<?>) getField()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -141,8 +143,8 @@ public class FunctionImpl extends MinimalEObjectImpl.Container implements Functi
 		switch (featureID) {
 		case IdlPackage.FUNCTION__NAME:
 			return getName();
-		case IdlPackage.FUNCTION__FIELDFUNCTION:
-			return getFieldfunction();
+		case IdlPackage.FUNCTION__FIELD:
+			return getField();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -159,9 +161,9 @@ public class FunctionImpl extends MinimalEObjectImpl.Container implements Functi
 		case IdlPackage.FUNCTION__NAME:
 			setName((String) newValue);
 			return;
-		case IdlPackage.FUNCTION__FIELDFUNCTION:
-			getFieldfunction().clear();
-			getFieldfunction().addAll((Collection<? extends FieldFunction>) newValue);
+		case IdlPackage.FUNCTION__FIELD:
+			getField().clear();
+			getField().addAll((Collection<? extends Field>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -178,8 +180,8 @@ public class FunctionImpl extends MinimalEObjectImpl.Container implements Functi
 		case IdlPackage.FUNCTION__NAME:
 			setName(NAME_EDEFAULT);
 			return;
-		case IdlPackage.FUNCTION__FIELDFUNCTION:
-			getFieldfunction().clear();
+		case IdlPackage.FUNCTION__FIELD:
+			getField().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -195,8 +197,8 @@ public class FunctionImpl extends MinimalEObjectImpl.Container implements Functi
 		switch (featureID) {
 		case IdlPackage.FUNCTION__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-		case IdlPackage.FUNCTION__FIELDFUNCTION:
-			return fieldfunction != null && !fieldfunction.isEmpty();
+		case IdlPackage.FUNCTION__FIELD:
+			return field != null && !field.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

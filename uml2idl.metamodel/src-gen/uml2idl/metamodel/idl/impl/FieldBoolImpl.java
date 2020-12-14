@@ -5,6 +5,7 @@ package uml2idl.metamodel.idl.impl;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
@@ -20,6 +21,7 @@ import uml2idl.metamodel.idl.IdlPackage;
  * </p>
  * <ul>
  *   <li>{@link uml2idl.metamodel.idl.impl.FieldBoolImpl#getId <em>Id</em>}</li>
+ *   <li>{@link uml2idl.metamodel.idl.impl.FieldBoolImpl#getName <em>Name</em>}</li>
  *   <li>{@link uml2idl.metamodel.idl.impl.FieldBoolImpl#getValue <em>Value</em>}</li>
  * </ul>
  *
@@ -45,6 +47,26 @@ public class FieldBoolImpl extends MinimalEObjectImpl.Container implements Field
 	 * @ordered
 	 */
 	protected int id = ID_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
@@ -111,6 +133,27 @@ public class FieldBoolImpl extends MinimalEObjectImpl.Container implements Field
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, IdlPackage.FIELD_BOOL__NAME, oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Boolean getValue() {
 		return value;
 	}
@@ -137,6 +180,8 @@ public class FieldBoolImpl extends MinimalEObjectImpl.Container implements Field
 		switch (featureID) {
 		case IdlPackage.FIELD_BOOL__ID:
 			return getId();
+		case IdlPackage.FIELD_BOOL__NAME:
+			return getName();
 		case IdlPackage.FIELD_BOOL__VALUE:
 			return getValue();
 		}
@@ -153,6 +198,9 @@ public class FieldBoolImpl extends MinimalEObjectImpl.Container implements Field
 		switch (featureID) {
 		case IdlPackage.FIELD_BOOL__ID:
 			setId((Integer) newValue);
+			return;
+		case IdlPackage.FIELD_BOOL__NAME:
+			setName((String) newValue);
 			return;
 		case IdlPackage.FIELD_BOOL__VALUE:
 			setValue((Boolean) newValue);
@@ -172,6 +220,9 @@ public class FieldBoolImpl extends MinimalEObjectImpl.Container implements Field
 		case IdlPackage.FIELD_BOOL__ID:
 			setId(ID_EDEFAULT);
 			return;
+		case IdlPackage.FIELD_BOOL__NAME:
+			setName(NAME_EDEFAULT);
+			return;
 		case IdlPackage.FIELD_BOOL__VALUE:
 			setValue(VALUE_EDEFAULT);
 			return;
@@ -189,6 +240,8 @@ public class FieldBoolImpl extends MinimalEObjectImpl.Container implements Field
 		switch (featureID) {
 		case IdlPackage.FIELD_BOOL__ID:
 			return id != ID_EDEFAULT;
+		case IdlPackage.FIELD_BOOL__NAME:
+			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		case IdlPackage.FIELD_BOOL__VALUE:
 			return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
 		}
@@ -208,6 +261,8 @@ public class FieldBoolImpl extends MinimalEObjectImpl.Container implements Field
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (id: ");
 		result.append(id);
+		result.append(", name: ");
+		result.append(name);
 		result.append(", value: ");
 		result.append(value);
 		result.append(')');
