@@ -11,43 +11,29 @@ rule Model2IDLModel {
 	to
 		m2 : IDL!IDLModel (
 				name <- m1.name,
-				services <- m1.packagedElement->iterate(element ; interfaces : OrderedSet(UML!Interface) =
-					OrderedSet{} |
-					if element.oclIsTypeOf(UML!Interface) then
-							interfaces.append(element)
-					else
-							interfaces
-					endif	
-				),
-				services <- m1.packagedElement->iterate(element ; datatypes : OrderedSet(UML!DataType) =
-					OrderedSet{} |
-					if element.oclIsTypeOf(UML!DataType) then
-							datatypes.append(element)
-					else
-							datatypes
-					endif	
-				)
+				services <- m1.ownedElement->select(element | element.oclIsKindOf(UML!Interface))->collect(e | thisModule.Interface2Service(e)),
+				structures <- m1.ownedElement->select(element | element.oclIsKindOf(UML!DataType))->collect(e | thisModule.DataType2Structure(e))
 			)
 } 
-rule Interface2Service{
+lazy rule Interface2Service{
 	from
 		interface1 : UML!Interface
 	to
-		service2 : IDL!Service (
+		service2 : IDL!Service(
 				name <- interface1.name,
-				function <- interface1.ownedOperation
+				function <- interface1.ownedOperation->select(element | element.oclIsKindOf(UML!Operation))->collect(e | thisModule.Operation2Function(e))
 			)
 }
-rule Operation2Function{
+lazy rule Operation2Function{
 	from
 		operation1 : UML!Operation
 	to
 		function2 : IDL!Function(
 				name <- operation1.name,
-				fieldfunction <- operation1.ownedParameter
+				fieldfunction <- operation1.ownedParameter->select(element | element.oclIsKindOf(UML!Parameter))->collect(e | thisModule.Parameter2FieldFunction(e))
 		)
 }
-rule Parameter2FieldFunction{
+lazy rule Parameter2FieldFunction{
 	from
 		parameter1 : UML!Parameter
 	to
@@ -56,12 +42,27 @@ rule Parameter2FieldFunction{
 				field <- parameter1.type
 		)
 }
-rule DataType2Structure{
+lazy rule DataType2Structure{
 	from
-		interface1 : UML!DataType
+		datatype1 : UML!DataType
 	to
-		service2 : IDL!Structure (
-				name <- interface1.name
+		structure2 : IDL!Structure(
+				name <- datatype1.name,
+				fieldstruct <- datatype1.ownedAttribute->select(element | element.oclIsKindOf(UML!Property))->collect(e | thisModule.Property2FieldStruct(e)) 
 			)
+}
+
+lazy rule Property2FieldStruct{
+	from
+		property1 : UML!Property
+	to
+		fieldstruct2 : IDL!FieldStruct(
+			name <- property1.name
+		)
+	}
+
+lazy rule Type2Field{
+	
+
 }
 
