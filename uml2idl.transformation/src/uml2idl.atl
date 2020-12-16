@@ -5,12 +5,76 @@
 module uml2thrift;
 create OUT : IDL from IN : UML;
 
-rule interface2service {
+rule Model2IDLModel {
 	from
 		m1 : UML!Model
 	to
 		m2 : IDL!IDLModel (
-				name <- m1.name
+				name <- m1.name,
+				services <- m1.ownedElement->select(element | element.oclIsKindOf(UML!Interface))->collect(e | thisModule.Interface2Service(e)),
+				structures <- m1.ownedElement->select(element | element.oclIsKindOf(UML!DataType))->collect(e | thisModule.DataType2Structure(e))
 			)
-		
 } 
+lazy rule Interface2Service{
+	from
+		interface1 : UML!Interface
+	to
+		service2 : IDL!Service(
+				name <- interface1.name,
+				function <- interface1.ownedOperation->select(element | element.oclIsKindOf(UML!Operation))->collect(e | thisModule.Operation2Function(e))
+			)
+}
+lazy rule Operation2Function{
+	from
+		operation1 : UML!Operation
+	to
+		function2 : IDL!Function(
+				name <- operation1.name,
+				field <- operation1.ownedParameter->select(element | element.oclIsKindOf(UML!Parameter))->collect(e | thisModule.Parameter2Field(e))
+		)
+}
+
+
+lazy rule Parameter2Field{
+	from
+		parameter1 : UML!Parameter
+	to
+		field : IDL!Field(
+				name <- parameter1.name,
+				type <- thisModule.UMLType2IDLType(parameter1.type)
+		)
+}
+
+
+
+lazy rule DataType2Structure{
+	from
+		datatype1 : UML!DataType
+	to
+		structure2 : IDL!Structure(
+				name <- datatype1.name,
+				field <- datatype1.ownedAttribute->select(element | element.oclIsKindOf(UML!Property))->collect(e | thisModule.Property2Field(e)) 
+			)
+}
+
+lazy rule Property2Field{
+	from
+		property1 : UML!Property
+	to
+		field2 : IDL!Field(
+			name <- property1.name,
+			type <- thisModule.UMLType2IDLType(property1.type)
+		)
+	}
+
+lazy rule UMLType2IDLType{
+	from
+		type1 : UML!Type
+	to
+		type2 : IDL!Type(
+			name <- type1.name
+		)
+	
+}
+
+

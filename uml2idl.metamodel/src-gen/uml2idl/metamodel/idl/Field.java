@@ -7,36 +7,36 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Service</b></em>'.
+ * A representation of the model object '<em><b>Field</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link uml2idl.metamodel.idl.Service#getName <em>Name</em>}</li>
- *   <li>{@link uml2idl.metamodel.idl.Service#getFunction <em>Function</em>}</li>
+ *   <li>{@link uml2idl.metamodel.idl.Field#getName <em>Name</em>}</li>
+ *   <li>{@link uml2idl.metamodel.idl.Field#getType <em>Type</em>}</li>
  * </ul>
  *
- * @see uml2idl.metamodel.idl.IdlPackage#getService()
+ * @see uml2idl.metamodel.idl.IdlPackage#getField()
  * @model
  * @generated
  */
-public interface Service extends EObject {
+public interface Field extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see uml2idl.metamodel.idl.IdlPackage#getService_Name()
+	 * @see uml2idl.metamodel.idl.IdlPackage#getField_Name()
 	 * @model
 	 * @generated
 	 */
 	String getName();
 
 	/**
-	 * Sets the value of the '{@link uml2idl.metamodel.idl.Service#getName <em>Name</em>}' attribute.
+	 * Sets the value of the '{@link uml2idl.metamodel.idl.Field#getName <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Name</em>' attribute.
@@ -46,15 +46,15 @@ public interface Service extends EObject {
 	void setName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Function</b></em>' containment reference list.
-	 * The list contents are of type {@link uml2idl.metamodel.idl.Function}.
+	 * Returns the value of the '<em><b>Type</b></em>' containment reference list.
+	 * The list contents are of type {@link uml2idl.metamodel.idl.Type}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Function</em>' containment reference list.
-	 * @see uml2idl.metamodel.idl.IdlPackage#getService_Function()
+	 * @return the value of the '<em>Type</em>' containment reference list.
+	 * @see uml2idl.metamodel.idl.IdlPackage#getField_Type()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Function> getFunction();
+	EList<Type> getType();
 
-} // Service
+} // Field

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<idl:IDLModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:idl="idl" name="CacheDatatypes">
+  <services name="Cache">
+    <function name="storeARecord">
+      <field name="host">
+        <type name="HostName"/>
+      </field>
+      <field name="address">
+        <type name="IPAddress"/>
+      </field>
+      <field name="ttl">
+        <type name="TimeToLive"/>
+      </field>
+    </function>
+  </services>
+  <structures name="IPAddress">
+    <field name="values">
+      <type name="Integer"/>
+    </field>
+  </structures>
+  <structures name="HostName">
+    <field name="names">
+      <type name="String"/>
+    </field>
+  </structures>
+  <structures name="TimeToLive">
+    <field name="value">
+      <type name="Real"/>
+    </field>
+  </structures>
+</idl:IDLModel>

@@ -40,6 +40,42 @@ public interface IdlFactory extends EFactory {
 	IDLModel createIDLModel();
 
 	/**
+	 * Returns a new object of class '<em>Structure</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Structure</em>'.
+	 * @generated
+	 */
+	Structure createStructure();
+
+	/**
+	 * Returns a new object of class '<em>Field</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Field</em>'.
+	 * @generated
+	 */
+	Field createField();
+
+	/**
+	 * Returns a new object of class '<em>Function</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Function</em>'.
+	 * @generated
+	 */
+	Function createFunction();
+
+	/**
+	 * Returns a new object of class '<em>Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Type</em>'.
+	 * @generated
+	 */
+	Type createType();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
