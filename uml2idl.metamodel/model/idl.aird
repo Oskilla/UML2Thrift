@@ -5,7 +5,7 @@
     <semanticResources>idl.genmodel</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_GpMHEDL9EeuEXa1SVB0wiQ">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_Grt2oDL9EeuEXa1SVB0wiQ" name="idl" repPath="#_GqypkDL9EeuEXa1SVB0wiQ" changeId="45bee8b2-d96f-4298-bf13-6146f9d25c0f">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_Grt2oDL9EeuEXa1SVB0wiQ" name="idl" repPath="#_GqypkDL9EeuEXa1SVB0wiQ" changeId="36537e38-2d31-48f5-a31a-da0b70db2a30">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="idl.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -275,17 +275,17 @@
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_e1IMsD4sEeuJNu0yUHZM-w" type="4001" element="_e1AQ5j4sEeuJNu0yUHZM-w" source="_a02OIDbZEeuP8ZEvUVufZw" target="_bsgO4D4sEeuJNu0yUHZM-w">
           <children xmi:type="notation:Node" xmi:id="_e1IzwD4sEeuJNu0yUHZM-w" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_e1IzwT4sEeuJNu0yUHZM-w" x="3" y="2"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_e1IzwT4sEeuJNu0yUHZM-w" x="-23" y="-18"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_e1Izwj4sEeuJNu0yUHZM-w" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_e1Izwz4sEeuJNu0yUHZM-w" x="-3" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_e1Izwz4sEeuJNu0yUHZM-w" x="-2" y="10"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_e1IzxD4sEeuJNu0yUHZM-w" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_e1IzxT4sEeuJNu0yUHZM-w" x="-16" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_e1IzxT4sEeuJNu0yUHZM-w" x="-17" y="10"/>
           </children>
           <styles xmi:type="notation:ConnectorStyle" xmi:id="_e1IMsT4sEeuJNu0yUHZM-w" routing="Rectilinear"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_e1IMsj4sEeuJNu0yUHZM-w" fontColor="7490599" fontName="Segoe UI" fontHeight="8"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_e1IMsz4sEeuJNu0yUHZM-w" points="[0, 0, 162, 5]$[-72, 0, 90, 5]$[-72, -5, 90, 0]$[-162, -5, 0, 0]"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_e1IMsz4sEeuJNu0yUHZM-w" points="[0, -2, 162, 3]$[-162, -2, 0, 3]"/>
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_e1Izxj4sEeuJNu0yUHZM-w" id="(0.0,0.7653061224489796)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_e1Ja0D4sEeuJNu0yUHZM-w" id="(1.0,0.7142857142857143)"/>
         </edges>
@@ -691,7 +691,7 @@
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_e1AQ5j4sEeuJNu0yUHZM-w" name="[0..*] type" sourceNode="_a0awUDbZEeuP8ZEvUVufZw" targetNode="_bsY6ID4sEeuJNu0yUHZM-w">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_e1AQ5j4sEeuJNu0yUHZM-w" name="[0..1] type" sourceNode="_a0awUDbZEeuP8ZEvUVufZw" targetNode="_bsY6ID4sEeuJNu0yUHZM-w">
       <target xmi:type="ecore:EReference" href="idl.ecore#//Field/type"/>
       <semanticElements xmi:type="ecore:EReference" href="idl.ecore#//Field/type"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_e1AQ5z4sEeuJNu0yUHZM-w" description="_oWtxoDL9EeuEXa1SVB0wiQ" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
