@@ -1,6 +1,11 @@
 package uml2idl.codegenerator
 
 import uml2idl.metamodel.idl.IDLModel
+import uml2idl.metamodel.idl.Service
+import uml2idl.metamodel.idl.Structure
+import uml2idl.metamodel.idl.Function
+import uml2idl.metamodel.idl.Type
+import uml2idl.metamodel.idl.Field
 
 class IDLCodeGenerator {
 	
@@ -19,8 +24,8 @@ class IDLCodeGenerator {
 		return '''
 		«FOR thriftClass : myModel.services»
 				service «thriftClass.name» {
-				«FOR Function fnct : thriftClass.function»
-				       «generateFunction(fnct)»
+				«FOR fnct : thriftClass.function»
+					«generateFunction(fnct)»      
 				«ENDFOR»
 				}
 		«ENDFOR»
@@ -30,11 +35,11 @@ class IDLCodeGenerator {
 	
 	private def String generateStructure(IDLModel myModel) {
 		return '''
-		«FOR thriftClass : myModel.»
+		«FOR thriftClass : myModel.structures»
 						struct «thriftClass.name» {
-									«FOR Field f : thriftClass.field»
-										«f.generateField»
-									«ENDFOR»
+								«FOR fi : thriftClass.field»
+									«generateField(fi)»
+								«ENDFOR»
 									}
 				«ENDFOR»
 		
@@ -42,7 +47,27 @@ class IDLCodeGenerator {
 	}
 	
 	private def String generateFunction(Function fnct){
+		return '''
 		
+		'''
+	}
+	
+	private def String generateField(Field fnct){
+		return '''
+			«generateType(fnct.type)»  «fnct.name»
+		'''
+		
+	}	
+	
+	private def String generateType(Type ty){
+		switch ty.name {
+			case ty.name == 'EInt' : return 'i32'
+			case ty.name == 'EDouble' : return 'double'
+			case ty.name == 'EString' : return 'string'
+			case ty.name == "EChar" : return 'string'
+			case ty.name == "EBoolean" : return 'bool'
+			default : return '''«ty.name»'''
+			}
 	}
 	
 	
