@@ -14,9 +14,6 @@ class IDLCodeGenerator {
 		return '''
 		«generateServices(inputThriftModel)»
 		«generateStructure(inputThriftModel)»
-		
-		
-		
 		'''
 	}
 	

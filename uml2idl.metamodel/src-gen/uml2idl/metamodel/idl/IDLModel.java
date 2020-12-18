@@ -3,6 +3,7 @@
 package uml2idl.metamodel.idl;
 
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<idl:IDLModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:idl="idl" name="B">
+  <services name="B1">
+    <function name="bar">
+      <field name="x">
+        <type name="EInt"/>
+      </field>
+    </function>
+  </services>
+  <services name="B2">
+    <function name="qux">
+      <field name="return">
+        <type name="String"/>
+      </field>
+    </function>
+  </services>
+</idl:IDLModel>

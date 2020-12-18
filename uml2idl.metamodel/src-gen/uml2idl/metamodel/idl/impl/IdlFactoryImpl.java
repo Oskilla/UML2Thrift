@@ -3,6 +3,7 @@
 package uml2idl.metamodel.idl.impl;
 
 import oracle.dss.util.xdo.common.io.ByteArray;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;

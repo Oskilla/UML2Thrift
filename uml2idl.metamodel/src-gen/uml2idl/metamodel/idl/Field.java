@@ -2,7 +2,6 @@
  */
 package uml2idl.metamodel.idl;
 
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -46,15 +45,25 @@ public interface Field extends EObject {
 	void setName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Type</b></em>' containment reference list.
-	 * The list contents are of type {@link uml2idl.metamodel.idl.Type}.
+	 * Returns the value of the '<em><b>Type</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Type</em>' containment reference list.
+	 * @return the value of the '<em>Type</em>' containment reference.
+	 * @see #setType(Type)
 	 * @see uml2idl.metamodel.idl.IdlPackage#getField_Type()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Type> getType();
+	Type getType();
+
+	/**
+	 * Sets the value of the '{@link uml2idl.metamodel.idl.Field#getType <em>Type</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Type</em>' containment reference.
+	 * @see #getType()
+	 * @generated
+	 */
+	void setType(Type value);
 
 } // Field

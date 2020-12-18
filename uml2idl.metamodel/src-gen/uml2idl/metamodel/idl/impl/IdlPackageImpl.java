@@ -3,6 +3,7 @@
 package uml2idl.metamodel.idl.impl;
 
 import oracle.dss.util.xdo.common.io.ByteArray;
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -56,6 +57,13 @@ public class IdlPackageImpl extends EPackageImpl implements IdlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass fieldEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass functionEClass = null;
 
 	/**
@@ -64,13 +72,6 @@ public class IdlPackageImpl extends EPackageImpl implements IdlPackage {
 	 * @generated
 	 */
 	private EClass typeEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass fieldEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -292,6 +293,33 @@ public class IdlPackageImpl extends EPackageImpl implements IdlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getField() {
+		return fieldEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getField_Name() {
+		return (EAttribute) fieldEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getField_Type() {
+		return (EReference) fieldEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getFunction() {
 		return functionEClass;
 	}
@@ -339,33 +367,6 @@ public class IdlPackageImpl extends EPackageImpl implements IdlPackage {
 	 */
 	public EReference getType_EType() {
 		return (EReference) typeEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getField() {
-		return fieldEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getField_Name() {
-		return (EAttribute) fieldEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getField_Type() {
-		return (EReference) fieldEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -585,7 +586,7 @@ public class IdlPackageImpl extends EPackageImpl implements IdlPackage {
 		initEClass(fieldEClass, Field.class, "Field", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getField_Name(), ecorePackage.getEString(), "name", null, 0, 1, Field.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getField_Type(), this.getType(), null, "type", null, 0, -1, Field.class, !IS_TRANSIENT,
+		initEReference(getField_Type(), this.getType(), null, "type", null, 0, 1, Field.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
 

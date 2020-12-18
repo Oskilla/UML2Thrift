@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<idl:IDLModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:idl="idl" name="D">
+  <services name="D">
+    <function name="do">
+      <field name="return">
+        <type name="MyDataType"/>
+      </field>
+    </function>
+    <function name="run">
+      <field name="u">
+        <type name="MyDataType"/>
+      </field>
+    </function>
+  </services>
+  <structures name="MyDataType">
+    <field name="value1">
+      <type name="Real"/>
+    </field>
+    <field name="value2">
+      <type name="EShort"/>
+    </field>
+  </structures>
+</idl:IDLModel>

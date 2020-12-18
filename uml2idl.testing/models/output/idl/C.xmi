@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<idl:IDLModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:idl="idl" name="C">
+  <services name="C1">
+    <function name="f1">
+      <field name="i1">
+        <type name="EInt"/>
+      </field>
+      <field name="i2">
+        <type name="EInt"/>
+      </field>
+      <field name="return">
+        <type name="EInt"/>
+      </field>
+    </function>
+    <function name="f2">
+      <field name="x">
+        <type name="EBoolean"/>
+      </field>
+    </function>
+  </services>
+  <services name="C2">
+    <function name="f3">
+      <field name="return">
+        <type name="EChar"/>
+      </field>
+    </function>
+  </services>
+</idl:IDLModel>
