@@ -19,7 +19,6 @@
     <genDataTypes ecoreDataType="idl.ecore#//long"/>
     <genDataTypes ecoreDataType="idl.ecore#//double"/>
     <genDataTypes ecoreDataType="idl.ecore#//string"/>
-    <genDataTypes ecoreDataType="idl.ecore#//byteArray"/>
     <genClasses ecoreClass="idl.ecore#//Service">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute idl.ecore#//Service/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference idl.ecore#//Service/function"/>
@@ -39,6 +38,7 @@
     <genClasses ecoreClass="idl.ecore#//Function">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute idl.ecore#//Function/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference idl.ecore#//Function/field"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference idl.ecore#//Function/returnType"/>
     </genClasses>
     <genClasses ecoreClass="idl.ecore#//Type">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute idl.ecore#//Type/name"/>

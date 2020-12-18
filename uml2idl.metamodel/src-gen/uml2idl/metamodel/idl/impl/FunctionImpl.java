@@ -32,6 +32,7 @@ import uml2idl.metamodel.idl.IdlPackage;
  * <ul>
  *   <li>{@link uml2idl.metamodel.idl.impl.FunctionImpl#getName <em>Name</em>}</li>
  *   <li>{@link uml2idl.metamodel.idl.impl.FunctionImpl#getField <em>Field</em>}</li>
+ *   <li>{@link uml2idl.metamodel.idl.impl.FunctionImpl#getReturnType <em>Return Type</em>}</li>
  * </ul>
  *
  * @generated
@@ -66,6 +67,16 @@ public class FunctionImpl extends MinimalEObjectImpl.Container implements Functi
 	 * @ordered
 	 */
 	protected EList<Field> field;
+
+	/**
+	 * The cached value of the '{@link #getReturnType() <em>Return Type</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getReturnType()
+	 * @generated
+	 * @ordered
+	 */
+	protected Field returnType;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -124,11 +135,63 @@ public class FunctionImpl extends MinimalEObjectImpl.Container implements Functi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Field getReturnType() {
+		return returnType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetReturnType(Field newReturnType, NotificationChain msgs) {
+		Field oldReturnType = returnType;
+		returnType = newReturnType;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					IdlPackage.FUNCTION__RETURN_TYPE, oldReturnType, newReturnType);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setReturnType(Field newReturnType) {
+		if (newReturnType != returnType) {
+			NotificationChain msgs = null;
+			if (returnType != null)
+				msgs = ((InternalEObject) returnType).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - IdlPackage.FUNCTION__RETURN_TYPE, null, msgs);
+			if (newReturnType != null)
+				msgs = ((InternalEObject) newReturnType).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - IdlPackage.FUNCTION__RETURN_TYPE, null, msgs);
+			msgs = basicSetReturnType(newReturnType, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, IdlPackage.FUNCTION__RETURN_TYPE, newReturnType,
+					newReturnType));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case IdlPackage.FUNCTION__FIELD:
 			return ((InternalEList<?>) getField()).basicRemove(otherEnd, msgs);
+		case IdlPackage.FUNCTION__RETURN_TYPE:
+			return basicSetReturnType(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -145,6 +208,8 @@ public class FunctionImpl extends MinimalEObjectImpl.Container implements Functi
 			return getName();
 		case IdlPackage.FUNCTION__FIELD:
 			return getField();
+		case IdlPackage.FUNCTION__RETURN_TYPE:
+			return getReturnType();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -165,6 +230,9 @@ public class FunctionImpl extends MinimalEObjectImpl.Container implements Functi
 			getField().clear();
 			getField().addAll((Collection<? extends Field>) newValue);
 			return;
+		case IdlPackage.FUNCTION__RETURN_TYPE:
+			setReturnType((Field) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -183,6 +251,9 @@ public class FunctionImpl extends MinimalEObjectImpl.Container implements Functi
 		case IdlPackage.FUNCTION__FIELD:
 			getField().clear();
 			return;
+		case IdlPackage.FUNCTION__RETURN_TYPE:
+			setReturnType((Field) null);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -199,6 +270,8 @@ public class FunctionImpl extends MinimalEObjectImpl.Container implements Functi
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		case IdlPackage.FUNCTION__FIELD:
 			return field != null && !field.isEmpty();
+		case IdlPackage.FUNCTION__RETURN_TYPE:
+			return returnType != null;
 		}
 		return super.eIsSet(featureID);
 	}

@@ -2,8 +2,6 @@
  */
 package uml2idl.metamodel.idl.impl;
 
-import oracle.dss.util.xdo.common.io.ByteArray;
-
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -135,13 +133,6 @@ public class IdlPackageImpl extends EPackageImpl implements IdlPackage {
 	 * @generated
 	 */
 	private EDataType stringEDataType = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EDataType byteArrayEDataType = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -347,6 +338,15 @@ public class IdlPackageImpl extends EPackageImpl implements IdlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getFunction_ReturnType() {
+		return (EReference) functionEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getType() {
 		return typeEClass;
 	}
@@ -455,15 +455,6 @@ public class IdlPackageImpl extends EPackageImpl implements IdlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EDataType getbyteArray() {
-		return byteArrayEDataType;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public IdlFactory getIdlFactory() {
 		return (IdlFactory) getEFactoryInstance();
 	}
@@ -507,6 +498,7 @@ public class IdlPackageImpl extends EPackageImpl implements IdlPackage {
 		functionEClass = createEClass(FUNCTION);
 		createEAttribute(functionEClass, FUNCTION__NAME);
 		createEReference(functionEClass, FUNCTION__FIELD);
+		createEReference(functionEClass, FUNCTION__RETURN_TYPE);
 
 		typeEClass = createEClass(TYPE);
 		createEAttribute(typeEClass, TYPE__NAME);
@@ -524,7 +516,6 @@ public class IdlPackageImpl extends EPackageImpl implements IdlPackage {
 		longEDataType = createEDataType(LONG);
 		doubleEDataType = createEDataType(DOUBLE);
 		stringEDataType = createEDataType(STRING);
-		byteArrayEDataType = createEDataType(BYTE_ARRAY);
 	}
 
 	/**
@@ -597,6 +588,9 @@ public class IdlPackageImpl extends EPackageImpl implements IdlPackage {
 		initEReference(getFunction_Field(), this.getField(), null, "field", null, 0, -1, Function.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
+		initEReference(getFunction_ReturnType(), this.getField(), null, "returnType", null, 1, 1, Function.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(typeEClass, Type.class, "Type", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getType_Name(), ecorePackage.getEString(), "name", null, 0, 1, Type.class, !IS_TRANSIENT,
@@ -618,7 +612,6 @@ public class IdlPackageImpl extends EPackageImpl implements IdlPackage {
 		initEDataType(longEDataType, Long.class, "long", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(doubleEDataType, Double.class, "double", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 		initEDataType(stringEDataType, String.class, "string", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
-		initEDataType(byteArrayEDataType, ByteArray.class, "byteArray", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

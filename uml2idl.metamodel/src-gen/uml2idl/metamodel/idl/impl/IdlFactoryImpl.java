@@ -2,8 +2,6 @@
  */
 package uml2idl.metamodel.idl.impl;
 
-import oracle.dss.util.xdo.common.io.ByteArray;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
@@ -101,8 +99,6 @@ public class IdlFactoryImpl extends EFactoryImpl implements IdlFactory {
 			return createdoubleFromString(eDataType, initialValue);
 		case IdlPackage.STRING:
 			return createstringFromString(eDataType, initialValue);
-		case IdlPackage.BYTE_ARRAY:
-			return createbyteArrayFromString(eDataType, initialValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -134,8 +130,6 @@ public class IdlFactoryImpl extends EFactoryImpl implements IdlFactory {
 			return convertdoubleToString(eDataType, instanceValue);
 		case IdlPackage.STRING:
 			return convertstringToString(eDataType, instanceValue);
-		case IdlPackage.BYTE_ARRAY:
-			return convertbyteArrayToString(eDataType, instanceValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -368,24 +362,6 @@ public class IdlFactoryImpl extends EFactoryImpl implements IdlFactory {
 	 * @generated
 	 */
 	public String convertstringToString(EDataType eDataType, Object instanceValue) {
-		return super.convertToString(eDataType, instanceValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ByteArray createbyteArrayFromString(EDataType eDataType, String initialValue) {
-		return (ByteArray) super.createFromString(eDataType, initialValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertbyteArrayToString(EDataType eDataType, Object instanceValue) {
 		return super.convertToString(eDataType, instanceValue);
 	}
 

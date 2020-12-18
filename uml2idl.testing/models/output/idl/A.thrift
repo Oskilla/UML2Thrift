@@ -1,0 +1,5 @@
+service A {
+		returnType foo()
+}
+
+

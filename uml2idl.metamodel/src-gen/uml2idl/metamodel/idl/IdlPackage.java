@@ -335,13 +335,22 @@ public interface IdlPackage extends EPackage {
 	int FUNCTION__FIELD = 1;
 
 	/**
+	 * The feature id for the '<em><b>Return Type</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION__RETURN_TYPE = 2;
+
+	/**
 	 * The number of structural features of the '<em>Function</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_FEATURE_COUNT = 2;
+	int FUNCTION_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Function</em>' class.
@@ -441,16 +450,6 @@ public interface IdlPackage extends EPackage {
 	 * @generated
 	 */
 	int STRING = 14;
-
-	/**
-	 * The meta object id for the '<em>byte Array</em>' data type.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see oracle.dss.util.xdo.common.io.ByteArray
-	 * @see uml2idl.metamodel.idl.impl.IdlPackageImpl#getbyteArray()
-	 * @generated
-	 */
-	int BYTE_ARRAY = 15;
 
 	/**
 	 * Returns the meta object for class '{@link uml2idl.metamodel.idl.Service <em>Service</em>}'.
@@ -613,6 +612,17 @@ public interface IdlPackage extends EPackage {
 	EReference getFunction_Field();
 
 	/**
+	 * Returns the meta object for the containment reference '{@link uml2idl.metamodel.idl.Function#getReturnType <em>Return Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Return Type</em>'.
+	 * @see uml2idl.metamodel.idl.Function#getReturnType()
+	 * @see #getFunction()
+	 * @generated
+	 */
+	EReference getFunction_ReturnType();
+
+	/**
 	 * Returns the meta object for class '{@link uml2idl.metamodel.idl.Type <em>Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -740,17 +750,6 @@ public interface IdlPackage extends EPackage {
 	 * @generated
 	 */
 	EDataType getstring();
-
-	/**
-	 * Returns the meta object for data type '{@link oracle.dss.util.xdo.common.io.ByteArray <em>byte Array</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for data type '<em>byte Array</em>'.
-	 * @see oracle.dss.util.xdo.common.io.ByteArray
-	 * @model instanceClass="oracle.dss.util.xdo.common.io.ByteArray"
-	 * @generated
-	 */
-	EDataType getbyteArray();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -906,6 +905,14 @@ public interface IdlPackage extends EPackage {
 		EReference FUNCTION__FIELD = eINSTANCE.getFunction_Field();
 
 		/**
+		 * The meta object literal for the '<em><b>Return Type</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FUNCTION__RETURN_TYPE = eINSTANCE.getFunction_ReturnType();
+
+		/**
 		 * The meta object literal for the '{@link uml2idl.metamodel.idl.impl.TypeImpl <em>Type</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1020,16 +1027,6 @@ public interface IdlPackage extends EPackage {
 		 * @generated
 		 */
 		EDataType STRING = eINSTANCE.getstring();
-
-		/**
-		 * The meta object literal for the '<em>byte Array</em>' data type.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see oracle.dss.util.xdo.common.io.ByteArray
-		 * @see uml2idl.metamodel.idl.impl.IdlPackageImpl#getbyteArray()
-		 * @generated
-		 */
-		EDataType BYTE_ARRAY = eINSTANCE.getbyteArray();
 
 	}
 

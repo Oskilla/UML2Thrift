@@ -22,7 +22,7 @@ class IDLCodeGenerator {
 		«FOR thriftClass : myModel.services»
 				service «thriftClass.name» {
 				«FOR fnct : thriftClass.function»
-					«generateFunction(fnct)»      
+					«generateFunction(fnct)»
 				«ENDFOR»
 				}
 		«ENDFOR»
@@ -37,34 +37,32 @@ class IDLCodeGenerator {
 								«FOR fi : thriftClass.field»
 									«generateField(fi)»
 								«ENDFOR»
-									}
+								}
 				«ENDFOR»
 		
 		'''
 	}
 	
 	private def String generateFunction(Function fnct){
-		return '''
-		
+		var j =1;
+		return '''		returnType «fnct.name»(«FOR parameter : fnct.field» «j++»:«generateParam(parameter)»,«ENDFOR»)
 		'''
 	}
 	
+	private def String generateParam(Field f){
+		return '''«f.name» «generateType(f.type)»'''
+	}
+	
 	private def String generateField(Field fnct){
+		var i = 1;
 		return '''
-			«generateType(fnct.type)»  «fnct.name»
+			«i++»:«generateType(fnct.type)» «fnct.name»
 		'''
 		
 	}	
 	
 	private def String generateType(Type ty){
-		switch ty.name {
-			case ty.name == 'EInt' : return 'i32'
-			case ty.name == 'EDouble' : return 'double'
-			case ty.name == 'EString' : return 'string'
-			case ty.name == "EChar" : return 'string'
-			case ty.name == "EBoolean" : return 'bool'
-			default : return '''«ty.name»'''
-			}
+		return '''«ty.name»'''
 	}
 	
 	
