@@ -30,10 +30,10 @@ lazy rule Operation2Function{
 	to
 		function2 : IDL!Function(
 				name <- operation1.name,
-				field <- operation1.ownedParameter->select(element | element.oclIsKindOf(UML!Parameter))->collect(e | thisModule.Parameter2Field(e)),
-				returnType<- operation1.dataType->select(element | element.oclIsKindOf(UML!DataType))->collect(e | thisModule.return2return(e))
+				field <- operation1.ownedParameter->select(element | element.oclIsKindOf(UML!Parameter))->collect(e | thisModule.Parameter2Field(e))
 		)
 }
+
 
 lazy rule Parameter2Field{
 	from
