@@ -37,7 +37,6 @@
     <genClasses ecoreClass="idl.ecore#//Function">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute idl.ecore#//Function/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference idl.ecore#//Function/field"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference idl.ecore#//Function/returnType"/>
     </genClasses>
     <genClasses ecoreClass="idl.ecore#//Type">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute idl.ecore#//Type/name"/>

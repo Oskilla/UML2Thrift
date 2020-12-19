@@ -24,7 +24,7 @@ class IDLCodeGenerator {
 				«FOR fnct : thriftClass.function»
 					«generateFunction(fnct)»
 				«ENDFOR»
-				}
+						}
 		«ENDFOR»
 		
 		'''

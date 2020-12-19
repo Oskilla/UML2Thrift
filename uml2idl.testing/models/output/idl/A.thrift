@@ -1,5 +1,5 @@
 service A {
 		returnType foo()
-}
+		}
 
 

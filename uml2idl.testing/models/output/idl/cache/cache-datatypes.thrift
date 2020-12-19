@@ -1,6 +1,6 @@
 service Cache {
 		returnType storeARecord( 1:host HostName, 2:address IPAddress, 3:ttl TimeToLive,)
-}
+		}
 
 struct IPAddress {
 		1:Integer values
