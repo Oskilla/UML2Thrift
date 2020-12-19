@@ -335,22 +335,13 @@ public interface IdlPackage extends EPackage {
 	int FUNCTION__FIELD = 1;
 
 	/**
-	 * The feature id for the '<em><b>Return Type</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FUNCTION__RETURN_TYPE = 2;
-
-	/**
 	 * The number of structural features of the '<em>Function</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_FEATURE_COUNT = 3;
+	int FUNCTION_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Function</em>' class.
@@ -372,16 +363,6 @@ public interface IdlPackage extends EPackage {
 	int ACCEPTED_TYPE = 6;
 
 	/**
-	 * The meta object id for the '{@link uml2idl.metamodel.idl.NewEnum2 <em>New Enum2</em>}' enum.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see uml2idl.metamodel.idl.NewEnum2
-	 * @see uml2idl.metamodel.idl.impl.IdlPackageImpl#getNewEnum2()
-	 * @generated
-	 */
-	int NEW_ENUM2 = 7;
-
-	/**
 	 * The meta object id for the '<em>bool</em>' data type.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -389,7 +370,7 @@ public interface IdlPackage extends EPackage {
 	 * @see uml2idl.metamodel.idl.impl.IdlPackageImpl#getbool()
 	 * @generated
 	 */
-	int BOOL = 8;
+	int BOOL = 7;
 
 	/**
 	 * The meta object id for the '<em>byte</em>' data type.
@@ -399,7 +380,7 @@ public interface IdlPackage extends EPackage {
 	 * @see uml2idl.metamodel.idl.impl.IdlPackageImpl#getbyte()
 	 * @generated
 	 */
-	int BYTE = 9;
+	int BYTE = 8;
 
 	/**
 	 * The meta object id for the '<em>i16</em>' data type.
@@ -409,7 +390,7 @@ public interface IdlPackage extends EPackage {
 	 * @see uml2idl.metamodel.idl.impl.IdlPackageImpl#geti16()
 	 * @generated
 	 */
-	int I16 = 10;
+	int I16 = 9;
 
 	/**
 	 * The meta object id for the '<em>i32</em>' data type.
@@ -419,7 +400,7 @@ public interface IdlPackage extends EPackage {
 	 * @see uml2idl.metamodel.idl.impl.IdlPackageImpl#geti32()
 	 * @generated
 	 */
-	int I32 = 11;
+	int I32 = 10;
 
 	/**
 	 * The meta object id for the '<em>long</em>' data type.
@@ -429,7 +410,7 @@ public interface IdlPackage extends EPackage {
 	 * @see uml2idl.metamodel.idl.impl.IdlPackageImpl#getlong()
 	 * @generated
 	 */
-	int LONG = 12;
+	int LONG = 11;
 
 	/**
 	 * The meta object id for the '<em>double</em>' data type.
@@ -439,7 +420,7 @@ public interface IdlPackage extends EPackage {
 	 * @see uml2idl.metamodel.idl.impl.IdlPackageImpl#getdouble()
 	 * @generated
 	 */
-	int DOUBLE = 13;
+	int DOUBLE = 12;
 
 	/**
 	 * The meta object id for the '<em>string</em>' data type.
@@ -449,7 +430,7 @@ public interface IdlPackage extends EPackage {
 	 * @see uml2idl.metamodel.idl.impl.IdlPackageImpl#getstring()
 	 * @generated
 	 */
-	int STRING = 14;
+	int STRING = 13;
 
 	/**
 	 * Returns the meta object for class '{@link uml2idl.metamodel.idl.Service <em>Service</em>}'.
@@ -612,17 +593,6 @@ public interface IdlPackage extends EPackage {
 	EReference getFunction_Field();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link uml2idl.metamodel.idl.Function#getReturnType <em>Return Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Return Type</em>'.
-	 * @see uml2idl.metamodel.idl.Function#getReturnType()
-	 * @see #getFunction()
-	 * @generated
-	 */
-	EReference getFunction_ReturnType();
-
-	/**
 	 * Returns the meta object for class '{@link uml2idl.metamodel.idl.Type <em>Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -663,16 +633,6 @@ public interface IdlPackage extends EPackage {
 	 * @generated
 	 */
 	EEnum getAcceptedType();
-
-	/**
-	 * Returns the meta object for enum '{@link uml2idl.metamodel.idl.NewEnum2 <em>New Enum2</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>New Enum2</em>'.
-	 * @see uml2idl.metamodel.idl.NewEnum2
-	 * @generated
-	 */
-	EEnum getNewEnum2();
 
 	/**
 	 * Returns the meta object for data type '{@link java.lang.Boolean <em>bool</em>}'.
@@ -905,14 +865,6 @@ public interface IdlPackage extends EPackage {
 		EReference FUNCTION__FIELD = eINSTANCE.getFunction_Field();
 
 		/**
-		 * The meta object literal for the '<em><b>Return Type</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference FUNCTION__RETURN_TYPE = eINSTANCE.getFunction_ReturnType();
-
-		/**
 		 * The meta object literal for the '{@link uml2idl.metamodel.idl.impl.TypeImpl <em>Type</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -947,16 +899,6 @@ public interface IdlPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum ACCEPTED_TYPE = eINSTANCE.getAcceptedType();
-
-		/**
-		 * The meta object literal for the '{@link uml2idl.metamodel.idl.NewEnum2 <em>New Enum2</em>}' enum.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see uml2idl.metamodel.idl.NewEnum2
-		 * @see uml2idl.metamodel.idl.impl.IdlPackageImpl#getNewEnum2()
-		 * @generated
-		 */
-		EEnum NEW_ENUM2 = eINSTANCE.getNewEnum2();
 
 		/**
 		 * The meta object literal for the '<em>bool</em>' data type.

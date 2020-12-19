@@ -11,7 +11,6 @@
   <genPackages prefix="Idl" basePackage="uml2idl.metamodel" disposableProviderFactory="true"
       ecorePackage="idl.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="idl.ecore#//AcceptedType"/>
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="idl.ecore#//NewEnum2"/>
     <genDataTypes ecoreDataType="idl.ecore#//bool"/>
     <genDataTypes ecoreDataType="idl.ecore#//byte"/>
     <genDataTypes ecoreDataType="idl.ecore#//i16"/>

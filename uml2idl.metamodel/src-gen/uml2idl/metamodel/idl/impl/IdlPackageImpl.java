@@ -17,7 +17,6 @@ import uml2idl.metamodel.idl.Function;
 import uml2idl.metamodel.idl.IDLModel;
 import uml2idl.metamodel.idl.IdlFactory;
 import uml2idl.metamodel.idl.IdlPackage;
-import uml2idl.metamodel.idl.NewEnum2;
 import uml2idl.metamodel.idl.Service;
 import uml2idl.metamodel.idl.Structure;
 import uml2idl.metamodel.idl.Type;
@@ -77,13 +76,6 @@ public class IdlPackageImpl extends EPackageImpl implements IdlPackage {
 	 * @generated
 	 */
 	private EEnum acceptedTypeEEnum = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EEnum newEnum2EEnum = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -338,15 +330,6 @@ public class IdlPackageImpl extends EPackageImpl implements IdlPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getFunction_ReturnType() {
-		return (EReference) functionEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getType() {
 		return typeEClass;
 	}
@@ -376,15 +359,6 @@ public class IdlPackageImpl extends EPackageImpl implements IdlPackage {
 	 */
 	public EEnum getAcceptedType() {
 		return acceptedTypeEEnum;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EEnum getNewEnum2() {
-		return newEnum2EEnum;
 	}
 
 	/**
@@ -498,7 +472,6 @@ public class IdlPackageImpl extends EPackageImpl implements IdlPackage {
 		functionEClass = createEClass(FUNCTION);
 		createEAttribute(functionEClass, FUNCTION__NAME);
 		createEReference(functionEClass, FUNCTION__FIELD);
-		createEReference(functionEClass, FUNCTION__RETURN_TYPE);
 
 		typeEClass = createEClass(TYPE);
 		createEAttribute(typeEClass, TYPE__NAME);
@@ -506,7 +479,6 @@ public class IdlPackageImpl extends EPackageImpl implements IdlPackage {
 
 		// Create enums
 		acceptedTypeEEnum = createEEnum(ACCEPTED_TYPE);
-		newEnum2EEnum = createEEnum(NEW_ENUM2);
 
 		// Create data types
 		boolEDataType = createEDataType(BOOL);
@@ -588,9 +560,6 @@ public class IdlPackageImpl extends EPackageImpl implements IdlPackage {
 		initEReference(getFunction_Field(), this.getField(), null, "field", null, 0, -1, Function.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
-		initEReference(getFunction_ReturnType(), this.getField(), null, "returnType", null, 1, 1, Function.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(typeEClass, Type.class, "Type", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getType_Name(), ecorePackage.getEString(), "name", null, 0, 1, Type.class, !IS_TRANSIENT,
@@ -601,8 +570,6 @@ public class IdlPackageImpl extends EPackageImpl implements IdlPackage {
 
 		// Initialize enums and add enum literals
 		initEEnum(acceptedTypeEEnum, AcceptedType.class, "AcceptedType");
-
-		initEEnum(newEnum2EEnum, NewEnum2.class, "NewEnum2");
 
 		// Initialize data types
 		initEDataType(boolEDataType, Boolean.class, "bool", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);

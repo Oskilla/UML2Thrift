@@ -83,8 +83,6 @@ public class IdlFactoryImpl extends EFactoryImpl implements IdlFactory {
 		switch (eDataType.getClassifierID()) {
 		case IdlPackage.ACCEPTED_TYPE:
 			return createAcceptedTypeFromString(eDataType, initialValue);
-		case IdlPackage.NEW_ENUM2:
-			return createNewEnum2FromString(eDataType, initialValue);
 		case IdlPackage.BOOL:
 			return createboolFromString(eDataType, initialValue);
 		case IdlPackage.BYTE:
@@ -114,8 +112,6 @@ public class IdlFactoryImpl extends EFactoryImpl implements IdlFactory {
 		switch (eDataType.getClassifierID()) {
 		case IdlPackage.ACCEPTED_TYPE:
 			return convertAcceptedTypeToString(eDataType, instanceValue);
-		case IdlPackage.NEW_ENUM2:
-			return convertNewEnum2ToString(eDataType, instanceValue);
 		case IdlPackage.BOOL:
 			return convertboolToString(eDataType, instanceValue);
 		case IdlPackage.BYTE:
@@ -214,28 +210,6 @@ public class IdlFactoryImpl extends EFactoryImpl implements IdlFactory {
 	 * @generated
 	 */
 	public String convertAcceptedTypeToString(EDataType eDataType, Object instanceValue) {
-		return instanceValue == null ? null : instanceValue.toString();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NewEnum2 createNewEnum2FromString(EDataType eDataType, String initialValue) {
-		NewEnum2 result = NewEnum2.get(initialValue);
-		if (result == null)
-			throw new IllegalArgumentException(
-					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-		return result;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertNewEnum2ToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

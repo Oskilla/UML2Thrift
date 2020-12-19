@@ -4,8 +4,8 @@ service E {
 
 struct DataType1 {
 		1:DataType2 value
-			}
+		}
 struct DataType2 {
 		1:EDouble value
-			}
+		}
 

@@ -6,5 +6,5 @@ service D {
 struct MyDataType {
 		1:Real value1
 		1:EShort value2
-			}
+		}
 

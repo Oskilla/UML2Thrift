@@ -17,7 +17,6 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link uml2idl.metamodel.idl.Function#getName <em>Name</em>}</li>
  *   <li>{@link uml2idl.metamodel.idl.Function#getField <em>Field</em>}</li>
- *   <li>{@link uml2idl.metamodel.idl.Function#getReturnType <em>Return Type</em>}</li>
  * </ul>
  *
  * @see uml2idl.metamodel.idl.IdlPackage#getFunction()
@@ -58,27 +57,5 @@ public interface Function extends EObject {
 	 * @generated
 	 */
 	EList<Field> getField();
-
-	/**
-	 * Returns the value of the '<em><b>Return Type</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Return Type</em>' containment reference.
-	 * @see #setReturnType(Field)
-	 * @see uml2idl.metamodel.idl.IdlPackage#getFunction_ReturnType()
-	 * @model containment="true" required="true"
-	 * @generated
-	 */
-	Field getReturnType();
-
-	/**
-	 * Sets the value of the '{@link uml2idl.metamodel.idl.Function#getReturnType <em>Return Type</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Return Type</em>' containment reference.
-	 * @see #getReturnType()
-	 * @generated
-	 */
-	void setReturnType(Field value);
 
 } // Function
